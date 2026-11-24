@@ -184,7 +184,7 @@ python3 distill.py --sample examples/sample_answers.json --out examples/沈知�
 - 回答默认存 `~/.dsh/dameng/answers.json`，导出到 `~/.dsh/dameng/exports/`，不进入工作区或 Git。
 - 源码在 [`plugin/dameng/`](plugin/dameng/)；本地安装：**Plugins → Add plugin → 选这个目录**。
 
-这是 **agent 插件**：没有独立的网页界面，访谈在对话里完成。原来的本地网页仍然保留，两边数据相互独立；插件首次启用时把网页里已有的回答迁进了 `~/.dsh/dameng/answers.json`。
+这是 **agent 插件**：没有独立的网页界面，访谈在对话里完成。原来的本地网页仍然保留，两边数据相互独立；这次安装时已把网页里已有的回答迁进了 `~/.dsh/dameng/answers.json`。
 
 ## 语言
 
