@@ -1,0 +1,27 @@
+{
+  "name": "@local/dameng",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A 140-question life survey and digital-twin distillation, driven entirely in chat.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib.js",
+    "cordis.patch.yml",
+    "data",
+    "locale",
+    "docs",
+    "icon.svg",
+    "scripts"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

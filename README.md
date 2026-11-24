@@ -134,6 +134,7 @@ python3 distill.py --name 我
 ├── tools/
 │   ├── record.py             命令行记录工具
 │   └── i18n_build.py         合并/检查语言包
+├── plugin/dameng/            DSH Host 插件（对话里直接做调研）
 ├── twin/
 │   ├── system_prompt.md      数字人运行规则（模板）
 │   ├── exam.md               25 题校验考试 + 盲测
@@ -172,6 +173,18 @@ python3 distill.py --sample examples/sample_answers.json --out examples/沈知�
 - **不是 100% 复制**：没有意识、身体和连续体验，不可能完全一致。目标是高保真 + 知道自己不知道什么。
 - **不是替身**：不用于冒充你签约、转账、承诺或操纵他人。被问「你是真人吗」时，它必须说实话。
 - **不是一次性生成**：第一版一定不够像。真正的质量来自考试、盲测和校准日志。
+
+## DSH 插件
+
+同一套题库也打包成了 DSH Host 插件 `@local/dameng`，已安装到当前 profile：
+
+- 在对话里说「开始大梦访谈」，agent 会调用 `dameng_guide`，再按 `dameng_questions` 一次问一题。
+- `dameng_answer` 逐字记录回答，`skip: true` 标记跳过。
+- `dameng_status` 看进度，`dameng_export` 生成中文/英文/日文/韩文档案。
+- 回答默认存 `~/.dsh/dameng/answers.json`，导出到 `~/.dsh/dameng/exports/`，不进入工作区或 Git。
+- 源码在 [`plugin/dameng/`](plugin/dameng/)；本地安装：**Plugins → Add plugin → 选这个目录**。
+
+这是 **agent 插件**：没有独立的网页界面，访谈在对话里完成。原来的本地网页仍然保留，两边数据相互独立；插件首次启用时把网页里已有的回答迁进了 `~/.dsh/dameng/answers.json`。
 
 ## 语言
 

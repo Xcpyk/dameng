@@ -1,7 +1,7 @@
 # never publish real answers or exports
-data/
-exports/*
-!exports/.gitkeep
+/data/
+/exports/*
+!/exports/.gitkeep
 
 # local databases
 *.db
