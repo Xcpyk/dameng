@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "started_at": null,
+  "sessions": [],
+  "skipped": [],
+  "threads": [],
+  "consent": {
+    "local_only": true,
+    "private_layer": "ask",
+    "allow_export": true
+  }
+}

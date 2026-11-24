@@ -1,0 +1,89 @@
+{
+  "id": "M14",
+  "title": "终局校验",
+  "subtitle": "写下你的使用说明书",
+  "why": "最后几题不是回忆，是校准。你亲手写下「怎样才算像我」「什么绝对不能说」，数字人就有了边界。这一章也会成为校验考试的评分标准。",
+  "time": "约 20 分钟",
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "longtext",
+      "core": true,
+      "title": "你的使用说明书",
+      "prompt": "别人要怎么和你相处？怎么道歉你会接受？怎么拒绝你，你不会受伤？你需要空间时，别人该怎么做？",
+      "hint": "像给新同事或伴侣写一份说明书。",
+      "probes": ["你最讨厌的关心方式是什么？", "你难受时希望别人做点什么，还是什么都别做？"],
+      "tags": ["manual", "relationship", "boundary"]
+    },
+    {
+      "id": "Q02",
+      "type": "longtext",
+      "core": true,
+      "title": "最容易被误解的地方",
+      "prompt": "你最容易被人误解的地方是什么？为什么？",
+      "hint": "写那个你解释了无数次、还是没人懂的点。",
+      "probes": ["你希望别人怎么理解你？", "你会为了不被误解而改变吗？"],
+      "tags": ["identity", "misunderstanding", "others-view"]
+    },
+    {
+      "id": "Q03",
+      "type": "longtext",
+      "core": false,
+      "title": "关闭、炸毛、逃离",
+      "prompt": "什么会让你瞬间关闭、炸毛或想逃离？请各举一个具体触发点。",
+      "hint": "写身体信号和你的第一反应。",
+      "probes": ["触发之后你通常多久恢复？", "有人知道怎么把你拉回来吗？"],
+      "tags": ["trigger", "emotion", "boundary"]
+    },
+    {
+      "id": "Q04",
+      "type": "text",
+      "core": false,
+      "title": "最近改变的主意",
+      "prompt": "你最近一次改变主意是什么事？是什么让你改变的？",
+      "hint": "大小都行。",
+      "probes": ["你容易改变主意吗？", "什么事你绝不会改？"],
+      "tags": ["change", "belief", "recent"]
+    },
+    {
+      "id": "Q05",
+      "type": "text",
+      "core": false,
+      "title": "只保留三句话",
+      "prompt": "如果数字人只能保留你的三句话，你选哪三句？",
+      "hint": "可以是口头禅、人生信条、或你常对别人说的话。",
+      "probes": ["为什么是这三句？", "这三句能代表你吗？"],
+      "tags": ["voice", "essence", "manual"]
+    },
+    {
+      "id": "Q06",
+      "type": "longtext",
+      "core": true,
+      "title": "数字人绝对不要做",
+      "prompt": "你希望数字人绝对不要说什么、做什么？（语气、内容、承诺、称呼、建议方式）",
+      "hint": "写红线。比如「不要叫我亲爱的」「不要替我答应任何事」「不要给鸡汤」。",
+      "probes": ["如果它越界了，你希望它怎么补救？", "有哪些话题它应该直接回避？"],
+      "tags": ["manual", "boundary", "safety"]
+    },
+    {
+      "id": "Q07",
+      "type": "longtext",
+      "core": true,
+      "title": "怎么判断「像我」",
+      "prompt": "你怎么判断一个回答「像我」？给出三个标准，按重要性排序。",
+      "hint": "比如：会用我的词、不会过度解释、先说结论、承认不知道。",
+      "probes": ["哪个标准最重要？", "哪种「像」其实是刻板印象？"],
+      "tags": ["manual", "evaluation", "voice"]
+    },
+    {
+      "id": "Q08",
+      "type": "text",
+      "core": false,
+      "title": "如果它比你更懂你",
+      "prompt": "如果有一天，数字人比你更懂你，你会害怕还是高兴？为什么？",
+      "hint": "写你的真实感受。",
+      "probes": ["你希望它替你做什么决定？", "你绝对不让它替你做什么决定？"],
+      "tags": ["manual", "ethics", "future"]
+    }
+  ]
+}

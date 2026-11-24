@@ -1,0 +1,109 @@
+{
+  "id": "M12",
+  "title": "意义、死亡与未完成",
+  "subtitle": "如果时间不多了，你留下什么",
+  "why": "最后一章把镜头拉远。一个人如何面对死亡、遗憾和未完成的事，决定了他/她真正看重什么——这也是数字人最该继承的部分。",
+  "time": "约 35 分钟",
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "longtext",
+      "core": true,
+      "title": "人生的意义",
+      "prompt": "你觉得人生的意义是什么？你的答案变过吗？",
+      "hint": "可以写「没有意义」，也可以写一个具体的画面。",
+      "probes": ["你什么时候最强烈地感到「活着真好」？", "你什么时候觉得一切都没意义？"],
+      "tags": ["meaning", "belief", "philosophy"]
+    },
+    {
+      "id": "Q02",
+      "type": "longtext",
+      "core": true,
+      "title": "死亡",
+      "prompt": "你怕死吗？你参加过葬礼、见过死亡吗？那之后你怎么看？",
+      "hint": "写你离死亡最近的一次。",
+      "probes": ["你相信死后还有吗？", "你希望怎么离开？"],
+      "tags": ["death", "mortality", "belief"]
+    },
+    {
+      "id": "Q03",
+      "type": "longtext",
+      "core": true,
+      "title": "只剩一年",
+      "prompt": "如果你只剩一年，你会怎么过？会告诉谁、不告诉谁？",
+      "hint": "写第一周、第一个月、最后一周。",
+      "probes": ["你会辞职吗？", "你最舍不得的是什么？"],
+      "tags": ["death", "priority", "desire"]
+    },
+    {
+      "id": "Q04",
+      "type": "longtext",
+      "core": true,
+      "title": "未完成的事",
+      "prompt": "你最想完成、但还没开始的一件事是什么？为什么没开始？",
+      "hint": "写那个你每年都想起一次的事。",
+      "probes": ["最小的第一步是什么？", "如果你永远不做，会后悔吗？"],
+      "tags": ["unfinished", "desire", "regret"]
+    },
+    {
+      "id": "Q05",
+      "type": "text",
+      "core": false,
+      "title": "墓志铭",
+      "prompt": "你希望墓志铭上写什么？你希望留下什么作品或影响？",
+      "hint": "一句话就够。",
+      "probes": ["你希望谁来看你？", "你希望被记住多久？"],
+      "tags": ["legacy", "death", "meaning"]
+    },
+    {
+      "id": "Q06",
+      "type": "longtext",
+      "core": true,
+      "title": "未完成的对话",
+      "prompt": "有没有一段「未完成的对话」——你想对某个人说、但一直没说的话？",
+      "hint": "写一句开头就好。",
+      "probes": ["为什么没说？", "如果现在说，会怎样？"],
+      "tags": ["unfinished", "relationship", "regret"]
+    },
+    {
+      "id": "Q07",
+      "type": "longtext",
+      "core": false,
+      "title": "原谅",
+      "prompt": "你原谅了谁？还没原谅谁？包括你自己吗？",
+      "hint": "写那个你嘴上说算了、心里没过去的人。",
+      "probes": ["原谅对你来说是什么？", "你需要谁的原谅？"],
+      "tags": ["forgiveness", "relationship", "emotion"]
+    },
+    {
+      "id": "Q08",
+      "type": "longtext",
+      "core": false,
+      "title": "十年后的一天",
+      "prompt": "十年后的你，理想状态是什么样？请具体到一天：住哪、和谁、做什么、几点起床。",
+      "hint": "不要写「财务自由、环游世界」，写一个普通的周二。",
+      "probes": ["那一天里，有什么是现在的你已经拥有的？", "你愿意为那一天放弃什么？"],
+      "tags": ["future", "vision", "daily"]
+    },
+    {
+      "id": "Q09",
+      "type": "text",
+      "core": false,
+      "title": "被记住多久",
+      "prompt": "你希望被谁记住、被记住多久？如果最终没有人记得你，你还觉得活过有意义吗？",
+      "hint": "写你的真实感受。",
+      "probes": ["你害怕被遗忘吗？", "什么能证明你活过？"],
+      "tags": ["legacy", "death", "meaning"]
+    },
+    {
+      "id": "Q10",
+      "type": "longtext",
+      "core": true,
+      "title": "给 20 岁的自己",
+      "prompt": "如果现在要给 20 岁的自己写三句话，你会写什么？",
+      "hint": "写你真正想说的，不写正确的。",
+      "probes": ["20 岁的你会听吗？", "你现在最需要听到哪一句？"],
+      "tags": ["voice", "advice", "self"]
+    }
+  ]
+}

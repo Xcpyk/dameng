@@ -1,0 +1,68 @@
+{
+  "en": {
+    "M04.Q01": {
+      "left": "Three hours alone to recharge",
+      "right": "The more people, the more energy"
+    },
+    "M04.Q02": {
+      "left": "Casual; plans are made to be broken",
+      "right": "Everything must be scheduled in advance"
+    },
+    "M04.Q03": {
+      "left": "Like a lake, rarely a wave",
+      "right": "Like the sea, obvious highs and lows"
+    },
+    "M04.Q04": {
+      "left": "Familiar is fine; don't fuss",
+      "right": "Novelty first; try it and see"
+    },
+    "M04.Q05": {
+      "left": "Keep the peace; say it only if you must",
+      "right": "Say it straight first, then deal with feelings"
+    }
+  },
+  "ja": {
+    "M04.Q01": {
+      "left": "一人で三時間いてようやく回復",
+      "right": "人が多いほど話して元気になる"
+    },
+    "M04.Q02": {
+      "left": "気分次第。計画は破るためにある",
+      "right": "すべて前もって決めておかないと落ち着かない"
+    },
+    "M04.Q03": {
+      "left": "湖面のように、ほとんど波がない",
+      "right": "海のように、上がり下がりが大きい"
+    },
+    "M04.Q04": {
+      "left": "慣れたものでいい。余計なことはしない",
+      "right": "新しいものが大事。まず試す"
+    },
+    "M04.Q05": {
+      "left": "まず角を立てない。言わずに済むなら言わない",
+      "right": "まず率直に言う。感情は後から"
+    }
+  },
+  "ko": {
+    "M04.Q01": {
+      "left": "혼자 세 시간은 있어야 충전",
+      "right": "사람이 많을수록 더 활력"
+    },
+    "M04.Q02": {
+      "left": "즉흥적. 계획은 깨라고 있는 것",
+      "right": "모든 걸 미리 정해 두어야 안심"
+    },
+    "M04.Q03": {
+      "left": "호수처럼 잔잔하다",
+      "right": "바다처럼 기복이 크다"
+    },
+    "M04.Q04": {
+      "left": "익숙한 게 좋다. 굳이 안 바꾼다",
+      "right": "새로운 게 중요하다. 일단 해본다"
+    },
+    "M04.Q05": {
+      "left": "먼저 분위기를 본다. 말 안 해도 되면 안 한다",
+      "right": "먼저 직설적으로 말한다. 감정은 그다음"
+    }
+  }
+}

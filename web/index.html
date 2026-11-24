@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大梦 · 人生调研</title>
+<meta name="description" content="一次关于你的、足够长的问答。蒸馏出一个和你一致的数字人。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="paper-grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="#" id="brand" aria-label="大梦">
+    <span class="seal" data-i18n="appSeal">梦</span>
+    <span class="brand-text"><strong data-i18n="appTitle">大梦</strong><small data-i18n="appSubtitle">纵火的青年，迫近的时间</small></span>
+  </a>
+  <div class="top-right">
+    <div class="mini-progress" title="完成进度">
+      <span id="progressLabel">0 / 140</span>
+      <span class="track"><i id="progressFill"></i></span>
+    </div>
+
+    <div class="lang-wrap">
+      <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+        <svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M3 12h18M12 3c2.7 3.2 2.7 14.8 0 18M12 3c-2.7 3.2-2.7 14.8 0 18"></path>
+        </svg>
+        <span id="langLabel" class="lang-label">中文</span>
+        <span class="lang-caret" aria-hidden="true"></span>
+      </button>
+      <div class="lang-menu" id="langMenu" role="listbox" hidden></div>
+    </div>
+
+    <button class="icon-btn" id="themeBtn" title="切换明暗" aria-label="切换明暗" data-i18n-title="theme" data-i18n-aria="theme">◐</button>
+    <button class="btn ghost" id="helpBtn" data-i18n="help">说明</button>
+    <button class="btn ghost" id="coreBtn" aria-pressed="false">只看主线</button>
+    <button class="btn primary" id="exportBtn" data-i18n="export">导出档案</button>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="搜索题目 / 关键词" autocomplete="off" aria-label="搜索题目" data-i18n-placeholder="searchPlaceholder" data-i18n-aria="searchPlaceholder">
+      <div id="searchResults" class="search-results" hidden></div>
+    </div>
+    <div class="side-title"><span data-i18n="chapters">十四章</span><span id="sideCount"></span></div>
+    <nav id="nav" aria-label="章节"></nav>
+    <div class="side-note">
+      <span data-i18n="localOnly">答案只存在这台电脑</span><br>
+      <code>data/dream.db</code><br>
+      <span class="dot-live"></span><span data-i18n="offline">不联网</span>
+    </div>
+  </aside>
+
+  <section id="content" class="content" aria-live="polite">
+    <div class="loading" data-i18n="loading">正在打开档案…</div>
+  </section>
+</main>
+
+<div id="toast" class="toast" role="status"></div>
+
+<div id="exportModal" class="modal" hidden>
+  <div class="modal-backdrop" data-close="exportModal"></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="exportTitle">
+    <button class="modal-close" data-close="exportModal" aria-label="关闭" data-i18n-aria="close">×</button>
+    <p class="eyebrow" data-i18n="exportEyebrow">导出</p>
+    <h2 id="exportTitle" data-i18n="exportTitle">导出这一次的档案</h2>
+    <p class="modal-lead" data-i18n="exportLead">生成《人生档案》《蒸馏指令》《覆盖报告》和原始备份。把它们交给一个强模型，就能得到第一版数字人。</p>
+    <div id="exportCoverage" class="export-coverage"></div>
+    <label class="field">
+      <span data-i18n="exportNameLabel">档案主人怎么称呼</span>
+      <input id="exportName" value="我" maxlength="20" autocomplete="off">
+    </label>
+    <button id="doExport" class="btn primary wide" data-i18n="exportGenerate">生成导出文件</button>
+    <div id="exportResult" class="export-result"></div>
+  </div>
+</div>
+
+<div id="helpModal" class="modal" hidden>
+  <div class="modal-backdrop" data-close="helpModal"></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+    <button class="modal-close" data-close="helpModal" aria-label="关闭" data-i18n-aria="close">×</button>
+    <p class="eyebrow" data-i18n="helpEyebrow">如何使用</p>
+    <h2 id="helpTitle" data-i18n="helpTitle">这不是考试</h2>
+    <p class="modal-lead" data-i18n="helpLead">这是一次有结构的口述史。先写记得的，空白和「想不起来」本身也是信息。</p>
+    <ul id="helpRules" class="help-rules"></ul>
+    <div class="help-block">
+      <h3 data-i18n="helpTipsTitle">三个建议</h3>
+      <p data-i18n="helpTip1">分 4–8 次做，每次 30–60 分钟。不要在深夜一次答完。</p>
+      <p data-i18n="helpTip2">写具体的事，少写对自己的评价。「我比较内向」不如「聚会到 90 分钟我会去阳台」。</p>
+      <p data-i18n="helpTip3">标注「可跳过」的题涉及隐私，跳过不影响档案成立；想写时，可以只写你愿意写的部分。</p>
+    </div>
+    <div class="help-block">
+      <h3 data-i18n="helpStorageTitle">答案去哪了</h3>
+      <p data-i18n-html="helpStorageHtml">只写进本机的 <code>data/dream.db</code>，页面不联网。导出后生成的 Markdown 也只在项目目录里。</p>
+    </div>
+    <div class="help-block">
+      <h3 data-i18n="helpEthicsTitle">边界</h3>
+      <p class="help-ethics" id="helpEthics"></p>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

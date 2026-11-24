@@ -1,0 +1,24 @@
+# never publish real answers or exports
+data/
+exports/*
+!exports/.gitkeep
+
+# local databases
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# OS / editor / logs
+.DS_Store
+*.log
+.env
+
+# keep this file itself
+!.gitignore

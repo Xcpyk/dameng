@@ -1,0 +1,109 @@
+{
+  "id": "M11",
+  "title": "关系网络与他者视角",
+  "subtitle": "你是由谁组成的",
+  "why": "一个人不是孤岛，是几张关系网的交叉点。这一章画出你的人物地图，也收集「别人眼里的你」——它能校正你的自我叙述。",
+  "time": "约 30 分钟",
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "longtext",
+      "core": true,
+      "title": "生命里最重要的七个人",
+      "prompt": "列出你生命中最重要的七个人（可以用代号）。每个人一句话：他是谁、你们什么关系、你欠他什么/他欠你什么。",
+      "hint": "包括活着和离开的人。写你想到名字时的第一感觉。",
+      "probes": ["谁是你不用解释就能懂的人？", "谁是你最想让他骄傲的人？"],
+      "tags": ["relationship", "map", "people"]
+    },
+    {
+      "id": "Q02",
+      "type": "text",
+      "core": false,
+      "title": "现在最亲近的人",
+      "prompt": "你现在最亲近的人是谁？多久见一次？聊什么？不聊什么？",
+      "hint": "写最近一次见面的细节。",
+      "probes": ["你们怎么表达关心？", "你有什么事不会告诉他/她？"],
+      "tags": ["relationship", "now", "intimacy"]
+    },
+    {
+      "id": "Q03",
+      "type": "text",
+      "core": false,
+      "title": "断交与失联",
+      "prompt": "有没有断交或失联的重要的人？为什么？你现在还会想起吗？",
+      "hint": "写最后一次对话。",
+      "probes": ["如果对方联系你，你会回吗？", "你后悔吗？"],
+      "tags": ["relationship", "loss", "regret"]
+    },
+    {
+      "id": "Q04",
+      "type": "text",
+      "core": false,
+      "title": "谁懂你，谁不懂",
+      "prompt": "谁最懂你？谁最不懂你？谁最怕你？谁最爱你？",
+      "hint": "可以重复，也可以写「没有人」。",
+      "probes": ["被懂的感觉是什么样的？", "你希望谁更懂你？"],
+      "tags": ["relationship", "others-view", "intimacy"]
+    },
+    {
+      "id": "Q05",
+      "type": "longtext",
+      "core": true,
+      "title": "你在朋友中的角色",
+      "prompt": "你在朋友中通常扮演什么角色？（组织者、倾听者、开心果、军师、消失的人、救火队……）",
+      "hint": "写一个具体场景：朋友出事时你做什么。",
+      "probes": ["你喜欢这个角色吗？", "你有没有当过被照顾的那个？"],
+      "tags": ["relationship", "role", "social"]
+    },
+    {
+      "id": "Q06",
+      "type": "longtext",
+      "core": false,
+      "title": "感谢、道歉与拒绝",
+      "prompt": "你如何表达感谢、道歉、拒绝？各举一个真实例子，写出你的原话。",
+      "hint": "原话很重要，数字人的语气就藏在这里。",
+      "probes": ["你说「不」难吗？", "你道歉时会解释吗？"],
+      "tags": ["voice", "relationship", "communication"]
+    },
+    {
+      "id": "Q07",
+      "type": "longtext",
+      "core": false,
+      "title": "人情债与未说出口的话",
+      "prompt": "你有没有人情债，或未说出口的话？对谁？",
+      "hint": "写那个你想起会沉默的人。",
+      "probes": ["你打算说吗？", "如果不说，会怎样？"],
+      "tags": ["relationship", "unfinished", "private"]
+    },
+    {
+      "id": "Q08",
+      "type": "text",
+      "core": false,
+      "title": "三封不必寄出的信",
+      "prompt": "如果给三个人各写一句话（不必寄出），你会写给谁、说什么？",
+      "hint": "一句话就够。",
+      "probes": ["为什么是这三个人？", "写完后你什么感觉？"],
+      "tags": ["relationship", "unfinished", "emotion"]
+    },
+    {
+      "id": "Q09",
+      "type": "longtext",
+      "core": true,
+      "title": "你希望被怎么记住",
+      "prompt": "你希望别人怎么记住你？你觉得别人实际会怎么记住你？",
+      "hint": "写两句：理想版和现实版。",
+      "probes": ["这两句差在哪里？", "你能接受现实版吗？"],
+      "tags": ["identity", "legacy", "others-view"]
+    },
+    {
+      "id": "Q10",
+      "type": "text",
+      "core": false,
+      "title": "最近一次感到被爱",
+      "prompt": "你最近一次真切地感到被爱是什么时候？对方做了什么？",
+      "hint": "写那个具体的动作或话。",
+      "probes": ["你当时怎么回应？", "你相信自己值得被爱吗？"],
+      "tags": ["love", "emotion", "now"]
+    }
+  ]
+}

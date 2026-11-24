@@ -1,0 +1,109 @@
+{
+  "id": "M10",
+  "title": "决策与思维",
+  "subtitle": "你怎么选，怎么后悔",
+  "why": "数字人如果不能替你做判断，就只是个聊天玩具。这一章提取你的决策算法：信息、直觉、风险、拖延和后悔的方式。",
+  "time": "约 30 分钟",
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "longtext",
+      "core": true,
+      "title": "重大决定的流程",
+      "prompt": "你做重大决定时，通常怎么走？（收集信息、问人、凭直觉、拖延、列清单）举最近一个真实决定。",
+      "hint": "写从起念到拍板的完整过程，包括你失眠的那晚。",
+      "probes": ["你最后通常听谁的？", "有没有决定做完就后悔的？"],
+      "tags": ["decision", "process", "behavior"]
+    },
+    {
+      "id": "Q02",
+      "type": "longtext",
+      "core": true,
+      "title": "最后悔的决定",
+      "prompt": "你最后悔的决定是什么？如果重来会怎么选？",
+      "hint": "写那个你偶尔还会在洗澡时想起的决定。",
+      "probes": ["你从里面学到了什么？", "你真的会选另一条吗？"],
+      "tags": ["decision", "regret", "counterfactual"]
+    },
+    {
+      "id": "Q03",
+      "type": "text",
+      "core": false,
+      "title": "风险偏好",
+      "prompt": "你是保守还是冒险？在钱、事业、感情上分别如何？举一个你冒险的例子。",
+      "hint": "三个领域可能完全不同，分开写。",
+      "probes": ["你冒过最大的险是什么？", "你输得起吗？"],
+      "tags": ["decision", "risk", "money"]
+    },
+    {
+      "id": "Q04",
+      "type": "text",
+      "core": false,
+      "title": "直觉",
+      "prompt": "你相信直觉吗？有没有一次直觉救了你，或害了你？",
+      "hint": "写身体的感觉：胃紧、后背发凉、莫名安心。",
+      "probes": ["你通常忽略直觉还是听从？", "你的直觉在什么事上最准？"],
+      "tags": ["decision", "intuition", "body"]
+    },
+    {
+      "id": "Q05",
+      "type": "text",
+      "core": false,
+      "title": "怎么学习，怎么放弃",
+      "prompt": "你如何学习新东西？什么时候会放弃？举一个你学会的和一个放弃的。",
+      "hint": "写你的学习路径：看教程、找人、直接做、拖很久。",
+      "probes": ["你放弃时通常怎么解释？", "你学得最快的一次是什么？"],
+      "tags": ["learning", "behavior", "persistence"]
+    },
+    {
+      "id": "Q06",
+      "type": "text",
+      "core": false,
+      "title": "意见不合",
+      "prompt": "你和别人意见不合时怎么处理？你会被说服吗？举一次你改变立场的经历。",
+      "hint": "写你争论时的语气和身体反应。",
+      "probes": ["你争的是道理还是输赢？", "你有没有表面同意、心里不服？"],
+      "tags": ["conflict", "belief", "communication"]
+    },
+    {
+      "id": "Q07",
+      "type": "text",
+      "core": false,
+      "title": "你知道自己有什么偏见",
+      "prompt": "你自知有哪些认知偏差？（确认偏误、沉没成本、讨好、灾难化、非黑即白……）",
+      "hint": "写你被抓包过的那个。",
+      "probes": ["谁提醒过你？", "你为此损失过什么？"],
+      "tags": ["cognition", "bias", "self-awareness"]
+    },
+    {
+      "id": "Q08",
+      "type": "text",
+      "core": false,
+      "title": "计划与执行",
+      "prompt": "你怎么做计划？年计划、月计划、待办清单，完成率大概多少？",
+      "hint": "写你实际用的工具和方法。",
+      "probes": ["计划完不成时你怎么对自己？", "你是计划型还是临场型？"],
+      "tags": ["planning", "conscientiousness", "habit"]
+    },
+    {
+      "id": "Q09",
+      "type": "text",
+      "core": false,
+      "title": "沉没成本",
+      "prompt": "你有没有该放手却没放手的事？（工作、关系、项目、一件东西）为什么放不下？",
+      "hint": "写你继续投入的理由，和真实理由。",
+      "probes": ["你最后怎么处理的？", "你现在还在其中吗？"],
+      "tags": ["decision", "sunk-cost", "regret"]
+    },
+    {
+      "id": "Q10",
+      "type": "longtext",
+      "core": true,
+      "title": "你的人生算法",
+      "prompt": "如果你的人生是一条算法，它的目标函数是什么？约束条件是什么？",
+      "hint": "目标函数：你实际在最大化的东西（不是嘴上说的）。约束：你不能牺牲的、不能突破的。",
+      "probes": ["这个算法是谁给你写的？", "你想改写哪一行？"],
+      "tags": ["values", "decision", "meaning"]
+    }
+  ]
+}

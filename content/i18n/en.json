@@ -1,0 +1,1428 @@
+{
+  "code": "en",
+  "name": "English",
+  "meta": {
+    "title": "Dameng · Life Survey",
+    "subtitle": "A life survey, distilled into a digital twin",
+    "intro": "This is not a personality test, and there is no score. It is closer to a long, structured oral history: first it puts you back in the present, then walks backward through family, character, love, work, desire and fear, and finally returns to what you want to leave behind. There are no right answers—only answers that sound like you.",
+    "rules": [
+      "Write what you remember first; it does not need to be complete. Blank spaces and “I can't remember” are information too.",
+      "Aim for specific events, not evaluations of yourself. Evaluations lie; scenes do not.",
+      "You can skip any question. Questions marked “optional” touch on privacy; skipping them does not keep the archive from being generated.",
+      "Everything stays on this computer (data/dream.db). No network, no uploads.",
+      "Do it in 4–8 sittings of 30–60 minutes. If something stirs you up, stop; you do not have to push through."
+    ],
+    "tiers": {
+      "core": "Core questions: about 3 hours, enough for a first version of the digital twin.",
+      "deep": "Deeper questions: make the archive thicker, especially contradictions, details and language samples.",
+      "sample": "Language samples: the single biggest factor in whether the twin sounds like you. Strongly recommended."
+    },
+    "ethics": "The digital twin is a mirror, not a stand-in. Do not use it to impersonate you in promises, signatures, transfers or manipulation. Private and traumatic material goes into the private layer by default; it enters the conversational archive only with your explicit permission."
+  },
+  "scales": {
+    "M04.Q01": {
+      "left": "Three hours alone to recharge",
+      "right": "The more people, the more energy"
+    },
+    "M04.Q02": {
+      "left": "Casual; plans are made to be broken",
+      "right": "Everything must be scheduled in advance"
+    },
+    "M04.Q03": {
+      "left": "Like a lake, rarely a wave",
+      "right": "Like the sea, obvious highs and lows"
+    },
+    "M04.Q04": {
+      "left": "Familiar is fine; don't fuss",
+      "right": "Novelty first; try it and see"
+    },
+    "M04.Q05": {
+      "left": "Keep the peace; say it only if you must",
+      "right": "Say it straight first, then deal with feelings"
+    }
+  },
+  "modules": {
+    "M01": {
+      "title": "Where You Are Now",
+      "subtitle": "Put yourself back in this moment",
+      "why": "The easiest mistake for a digital twin is to have opinions but no life. This chapter puts your body, your time, your money and your days in first. They set the ground you speak from and where the tiredness comes from.",
+      "time": "About 25 min",
+      "questions": {
+        "Q01": {
+          "title": "Three sentences",
+          "prompt": "Introduce who you are now in three sentences. First: who you are (identity, roles). Second: what you are doing (work, what your life centres on). Third: what you care about most right now, what you cannot put down.",
+          "hint": "Don't write a CV. Write what you tell yourself at 2 a.m. Three sentences is enough, no need to expand.",
+          "probes": [
+            "If you could keep only one, which one?",
+            "Which of the three sounds least like you?"
+          ]
+        },
+        "Q02": {
+          "title": "Basic coordinates",
+          "prompt": "Year and place of birth, where you live now, who you live with, what work you do, native language, dialect, other languages, family structure (parents, siblings, marriage, children).",
+          "hint": "Like filling in a file only you will read. A list of facts is enough.",
+          "probes": [
+            "How many times have you moved in the past ten years? Which move hurt most?",
+            "Where you live now: which corner of it is most like you?"
+          ]
+        },
+        "Q03": {
+          "title": "An ordinary workday",
+          "prompt": "From opening your eyes to closing them, how does an ordinary workday go? Write it in time order: waking up, phone, food, commute, work, time alone, bed.",
+          "hint": "The more trivial the better. Write what you actually do, not what you should do.",
+          "probes": [
+            "Which moment is most like you?",
+            "Which moment do you most want to escape?"
+          ]
+        },
+        "Q04": {
+          "title": "An ordinary weekend",
+          "prompt": "An unscheduled weekend: how do you spend it? With whom, where, doing what? If the weekend is arranged for you, how does that feel?",
+          "hint": "Write the most recent real weekend, not the ideal one.",
+          "probes": [
+            "Roughly what is your ratio of alone time to social time?",
+            "How do you usually feel when the weekend ends?"
+          ]
+        },
+        "Q05": {
+          "title": "The body, this machine",
+          "prompt": "Your body right now: sleep, energy, exercise, pain or chronic problems, food, anything off in a check-up. What is your relationship with your body like?",
+          "hint": "The body is the most honest biography. Write concrete numbers: what time you sleep, how many hours, how often you exercise.",
+          "probes": [
+            "Is there a part of your body that makes you sigh just thinking about it?",
+            "When did you last feel your body was doing well?"
+          ]
+        },
+        "Q06": {
+          "title": "Where money sits",
+          "prompt": "Your money now: where income comes from and roughly how it breaks down, debt, how safe your savings make you feel, your last big expense, the purchase you most regret.",
+          "hint": "Exact numbers are not needed; ranges and proportions are fine. What matters is how you feel about money, not the ledger.",
+          "probes": [
+            "When did you last lose sleep over money?",
+            "If your income stopped tomorrow, how long could you last?"
+          ]
+        },
+        "Q07": {
+          "title": "A pie chart of time",
+          "prompt": "Over the past year, what have you spent your time on? Give a rough pie chart in percentages, and mark which slice you actually want to be spending it on.",
+          "hint": "For example: work 50%, commute 8%, scrolling 12%, family 10%, yourself 5%.",
+          "probes": [
+            "Which slice surprises you most?",
+            "If you had to cut one slice, which one?"
+          ]
+        },
+        "Q08": {
+          "title": "The last real laugh, the last time you cried",
+          "prompt": "When did you last laugh for real, and at what? When did you last cry, or almost cry, and why?",
+          "hint": "Give the specific scene and the line that made you laugh or cry.",
+          "probes": [
+            "Are you quicker to laugh or quicker to cry?",
+            "Do you cry in front of other people?"
+          ]
+        },
+        "Q09": {
+          "title": "If your life right now were a film",
+          "prompt": "What is the title? What is the image in the first scene? If you had to write one tagline for it, what would it be?",
+          "hint": "Your first reaction is the most accurate. Don't think too long.",
+          "probes": [
+            "What genre is this film?",
+            "How do you want it to end?"
+          ]
+        },
+        "Q10": {
+          "title": "What the person who knows you best would say",
+          "prompt": "The person closest to you, the one who knows you best: how would they describe your state right now? Write in their voice, not yours.",
+          "hint": "Picture them sitting across from you, describing you to a stranger.",
+          "probes": [
+            "What are they most worried about for you?",
+            "Which part of what they say would you deny?"
+          ]
+        }
+      }
+    },
+    "M02": {
+      "title": "Life timeline",
+      "subtitle": "Ten anchor points, walking you through it again",
+      "why": "Character doesn't grow out of nowhere. It is the posture left by a series of concrete events. This chapter rebuilds your timeline out of scenes, not conclusions. A digital twin's memory can only come from here.",
+      "time": "About 50 min",
+      "questions": {
+        "Q01": {
+          "title": "Earliest memory",
+          "prompt": "What is your earliest memory? Roughly how old were you? The image, the smell, the sound, the light, who was there, how you felt.",
+          "hint": "You don't need to be sure of the age. Even if it is just one image or one smell, write it down.",
+          "probes": [
+            "In that scene, what would you most want to change?",
+            "Who did you later tell this memory to?"
+          ]
+        },
+        "Q02": {
+          "title": "Childhood (roughly 7 to 12)",
+          "prompt": "What was home like then? What was school like? Who was your best friend? What were you most afraid of? What were you proudest of?",
+          "hint": "One specific afternoon or one incident is far more useful than 'my childhood was happy'.",
+          "probes": [
+            "What kind of kid did you think you were then?",
+            "Was there an adult who really saw you?"
+          ]
+        },
+        "Q03": {
+          "title": "One thing that changed how you saw yourself",
+          "prompt": "In childhood or your teens, was there something that changed how you saw yourself? It can be for the better or the worse.",
+          "hint": "For example a competition, being wrongly blamed, changing schools, being praised.",
+          "probes": [
+            "If that hadn't happened, who would you have become?",
+            "Do you still believe the conclusion you drew then?"
+          ]
+        },
+        "Q04": {
+          "title": "Adolescence (roughly 13 to 18)",
+          "prompt": "Changes in your body, rebellion, secrets, the first time you liked someone, the first time you were turned down, your relationship with your parents. Pick what you remember most clearly.",
+          "hint": "You don't need to cover everything. Write the scene that still makes you blush or tightens your chest.",
+          "probes": [
+            "What was your biggest secret then?",
+            "What did you rebel against? What happened?"
+          ]
+        },
+        "Q05": {
+          "title": "The first big choice",
+          "prompt": "The college entrance exam, choosing a major, which city to go to, your first job. What was your first real, significant choice? What did you choose, who made the decision, and what did it cost?",
+          "hint": "What matters is not whether the outcome was good, but how you thought at the time and who influenced you.",
+          "probes": [
+            "If you could do it again, would you choose the other one?",
+            "What does that choice still affect now?"
+          ]
+        },
+        "Q06": {
+          "title": "First time leaving home (roughly 18 to 22)",
+          "prompt": "When did you first leave home for a long stretch? Where did you go? Who did you meet? What did you learn? What did you lose?",
+          "hint": "Write something that could only have happened because you left home.",
+          "probes": [
+            "When did you start missing home?",
+            "When did you first feel you had grown up?"
+          ]
+        },
+        "Q07": {
+          "title": "First real independence, first big failure (roughly 22 to 28)",
+          "prompt": "What was living on your own for the first time like? What did your first job teach you? What was your first big failure, and how did you get through it?",
+          "hint": "You can write about two jobs, a break-up, an exam, a start-up. Be specific.",
+          "probes": [
+            "What did that failure change in you?",
+            "Who caught you during that stretch?"
+          ]
+        },
+        "Q08": {
+          "title": "28 to now: three turning points",
+          "prompt": "From 28 to now, what have been the three most important turning points in your life? Changing cities, changing jobs, marriage, divorce, illness, a death in the family, starting something. How did you decide each time?",
+          "hint": "Write them in order. If you can't go on, write the headlines and add detail later.",
+          "probes": [
+            "Which one did you choose, and which one was you being pushed?",
+            "Do the three have anything in common?"
+          ]
+        },
+        "Q09": {
+          "title": "The lowest point",
+          "prompt": "When was the lowest point of your life so far? What happened? How did you get through each day? Who was there? How did you come out of it?",
+          "hint": "You can blur the details. If writing it now hurts, one line is enough: 'there was a stretch when...'",
+          "probes": [
+            "What did you most need to hear then?",
+            "Did you think about giving up? What kept you?"
+          ]
+        },
+        "Q10": {
+          "title": "The highest point",
+          "prompt": "What was the high point of your life? What happened? How did you feel at the time? Why didn't it continue?",
+          "hint": "A high point doesn't have to be worldly success. It could be an afternoon when you felt whole.",
+          "probes": [
+            "Who did you most want to tell at that moment?",
+            "Do you still think about it?"
+          ]
+        },
+        "Q11": {
+          "title": "Life curve: five points",
+          "prompt": "If you drew your life as a curve, age on the horizontal axis and state on the vertical, write five key points: age, state, and one word to name it.",
+          "hint": "For example: age 6, high, my grandmother's house; 16, low, turned down; 24, high, first job.",
+          "probes": [
+            "Which way is the curve trending now?",
+            "Where do you want the next point to be?"
+          ]
+        },
+        "Q12": {
+          "title": "The parallel life",
+          "prompt": "Is there a 'you that almost was'? Which step did it come down to? Do you still think about that person?",
+          "hint": "It could be another major, another city, another relationship, another profession.",
+          "probes": [
+            "Do you regret it?",
+            "What does that version of you have that you lack now?"
+          ]
+        }
+      }
+    },
+    "M03": {
+      "title": "Family and attachment",
+      "subtitle": "The first way you learned to love",
+      "why": "How a person handles conflict, how they ask for what they need, how they face being left: most of the first draft was written at the childhood dinner table. This chapter is not putting your parents on trial. It is seeing what you inherited and what you refused.",
+      "time": "About 35 min",
+      "questions": {
+        "Q01": {
+          "title": "Father",
+          "prompt": "What kind of person is your father? Describe him in three words. What is the one thing he did that affected you most? Are you like him?",
+          "hint": "Write concrete images: his catchphrase, his hands, what he looks like when he is angry.",
+          "probes": [
+            "What do you most want from him?",
+            "Which part of him do you least want to become?"
+          ]
+        },
+        "Q02": {
+          "title": "Mother",
+          "prompt": "What kind of person is your mother? Describe her in three words. What is the one thing she did that affected you most? Are you like her?",
+          "hint": "Again, concrete images rather than summaries like 'she had a hard life'.",
+          "probes": [
+            "What do you most want from her?",
+            "Which part of her do you least want to become?"
+          ]
+        },
+        "Q03": {
+          "title": "House rules, taboos, and things you don't say",
+          "prompt": "What were the stated and unstated rules in your home? Which topics could not be raised? Which feelings were not allowed? What mistakes got you punished?",
+          "hint": "For example: no crying, no talking back, silent treatment when your grades were bad, kids don't ask about money.",
+          "probes": [
+            "Which rule did you break? What happened?",
+            "Are those rules still in you now?"
+          ]
+        },
+        "Q04": {
+          "title": "You cried, you failed an exam, you broke something",
+          "prompt": "When you were a kid and you cried, failed an exam, or got into trouble, how did your family usually handle it? Give one real example of each.",
+          "hint": "Focus on the adults' first reaction, and yours.",
+          "probes": [
+            "What did you want them to do then?",
+            "How do you treat yourself now when you are sad?"
+          ]
+        },
+        "Q05": {
+          "title": "What you inherited and what you refused",
+          "prompt": "What did you inherit from your family? Habits, beliefs, fears, your body, the way you talk. What did you explicitly refuse to inherit?",
+          "hint": "Write three of each. The part you refused: have you managed it?",
+          "probes": [
+            "Was there a moment you noticed you were becoming more and more like my mother, my father?",
+            "What has refusing to inherit cost you?"
+          ]
+        },
+        "Q06": {
+          "title": "Your relationship with your parents now",
+          "prompt": "How often do you talk now? What do you talk about, what don't you? What have you done for them? What have they done for you?",
+          "hint": "Write about your last phone call: what was said and what the mood was.",
+          "probes": [
+            "Is there something you want to say to them but haven't?",
+            "What are they most worried about for you now?"
+          ]
+        },
+        "Q07": {
+          "title": "The secret the family doesn't mention",
+          "prompt": "Is there something in your family that everyone knows and no one mentions? Or a secret?",
+          "hint": "You can skip this. You can write it vaguely, e.g. 'a stretch of time about my uncle'.",
+          "probes": [
+            "How did it affect you?",
+            "Will you carry it into your own family?"
+          ]
+        },
+        "Q08": {
+          "title": "The way of raising kids you don't want to repeat",
+          "prompt": "If you have children, or will, what is the parenting you absolutely don't want to repeat? What do you want to manage to do?",
+          "hint": "Write concrete behaviour, not slogans.",
+          "probes": [
+            "Do you think you can do it?",
+            "What is the line you are most afraid will come out of your mouth?"
+          ]
+        },
+        "Q09": {
+          "title": "The moment your parents became ordinary people",
+          "prompt": "When did you first realise your parents were just ordinary people, that they make mistakes and that they will die? What happened?",
+          "hint": "It might have been an illness, an argument, or a time you found out they didn't know either.",
+          "probes": [
+            "Did your attitude toward them change after that?",
+            "How do you understand them now?"
+          ]
+        },
+        "Q10": {
+          "title": "What home is",
+          "prompt": "'Home': what is it to you? If home were a person, who would it be, what would they be like, what would they say to you?",
+          "hint": "Use a metaphor, not a definition.",
+          "probes": [
+            "Do you have the feeling of home now? Where?",
+            "What does your ideal home look like?"
+          ]
+        }
+      }
+    },
+    "M04": {
+      "title": "Behavioural evidence",
+      "subtitle": "Don't describe yourself. Say what happened.",
+      "why": "'I'm fairly introverted' is almost useless for modelling. 'Ninety minutes into a party I go stand on the balcony for ten' is not. This chapter locates your character through scenes and counter-examples, not labels.",
+      "time": "About 35 min",
+      "questions": {
+        "Q01": {
+          "title": "Social battery",
+          "prompt": "When you are with a group of people, how does your battery usually change?",
+          "hint": "Think of a specific group: colleagues, friends, family. It can differ by group; write the average first.",
+          "probes": [
+            "Which kind of person drains you most?",
+            "Which kind of person lets you stop performing?"
+          ],
+          "left": "Three hours alone before I recharge",
+          "right": "The more people and talk, the more charged I am"
+        },
+        "Q02": {
+          "title": "Need for order",
+          "prompt": "How much does your life need plans and order?",
+          "hint": "Look at your desk, your luggage, your to-do list, how you travel. Not at your ideals.",
+          "probes": [
+            "Where must things be tidy? Where can they be a mess?",
+            "When a plan gets disrupted, what is your first reaction?"
+          ],
+          "left": "Whatever comes. Plans are made to be broken",
+          "right": "Everything planned ahead, or I can't settle"
+        },
+        "Q03": {
+          "title": "Emotional range",
+          "prompt": "How far does your mood swing?",
+          "hint": "Think back over the last month: how many days were clearly off your normal?",
+          "probes": [
+            "What most easily lifts you? What most easily pulls you down?",
+            "Can other people tell?"
+          ],
+          "left": "Like a lake, rarely any waves",
+          "right": "Like the sea, the tides are obvious"
+        },
+        "Q04": {
+          "title": "Openness",
+          "prompt": "Faced with something new, a new restaurant, a new idea, a new place, a new tool, what is your usual attitude?",
+          "hint": "Think separately about food, play, methods at work, values. You may be open in only some of them.",
+          "probes": [
+            "What is one new thing you tried on your own recently?",
+            "What new thing will you absolutely not touch?"
+          ],
+          "left": "Stick with what's familiar, don't fuss",
+          "right": "New is what matters, try it first"
+        },
+        "Q05": {
+          "title": "Sharpness",
+          "prompt": "When you have to say something true that might make someone uncomfortable, how do you usually handle it?",
+          "hint": "Think of the last time you pointed out someone's problem, or held it in.",
+          "probes": [
+            "Have you hurt someone? How did you deal with it afterwards?",
+            "Do you want people to tell you the truth?"
+          ],
+          "left": "Keep the peace, say it only if you must",
+          "right": "Say it straight first, feelings after"
+        },
+        "Q06": {
+          "title": "Ninety minutes into a party",
+          "prompt": "A party is ninety minutes in. Where are you? What are you doing? What is going on in your head?",
+          "hint": "Write your body: checking your phone, on the balcony, doing the dishes, finding someone for a one-on-one.",
+          "probes": [
+            "When do you leave early? How do you say it?",
+            "Who do you usually end up with the longest at a party?"
+          ]
+        },
+        "Q07": {
+          "title": "What you promise others, what you promise yourself",
+          "prompt": "What you promise other people and what you promise yourself: which is easier to keep? Give one recent example of each.",
+          "hint": "For example 'rewriting a colleague's proposal' versus 'writing something for myself'.",
+          "probes": [
+            "When you break a promise to yourself, how do you explain it?",
+            "When someone breaks a promise to you, what do you think?"
+          ]
+        },
+        "Q08": {
+          "title": "Desk, room, phone home screen",
+          "prompt": "What do your desk, your room, and your phone's home screen look like right now? Where is the order, where is the chaos?",
+          "hint": "You can take a photo and then describe it in words. Don't tidy up first.",
+          "probes": [
+            "Does your mess follow a pattern?",
+            "What happens if someone moves your things?"
+          ]
+        },
+        "Q09": {
+          "title": "The last time you were really angry",
+          "prompt": "When were you last really angry, or badly irritated? What set it off? What did you do? How did it end?",
+          "hint": "Write your body's first reaction: face hot, hands shaking, wanting to throw something, wanting to disappear.",
+          "probes": [
+            "What is your pattern when angry: explode, go cold, argue it out, or keep score?",
+            "What did you want the other person to do then?"
+          ]
+        },
+        "Q10": {
+          "title": "The last time you were really sad",
+          "prompt": "When were you last really sad? How did you handle it? Did you find someone, or carry it yourself?",
+          "hint": "If you can't cry, write the blocked-up feeling instead.",
+          "probes": [
+            "Who do you most not want to see you sad?",
+            "What actually comforts you?"
+          ]
+        },
+        "Q11": {
+          "title": "Being alone",
+          "prompt": "Do you need time alone? How much? What do you turn into without it? What do you usually do alone?",
+          "hint": "Distinguish being by yourself from time that is really yours.",
+          "probes": [
+            "What do you think about most when you are alone?",
+            "Are you afraid of being alone?"
+          ]
+        },
+        "Q12": {
+          "title": "Praise and criticism",
+          "prompt": "How do you react when someone praises you? And when someone criticises you? Give one real recent example of each.",
+          "hint": "Write what you say out loud and what you think. They may differ.",
+          "probes": [
+            "Which compliment have you kept for a long time?",
+            "Which criticism still stings?"
+          ]
+        },
+        "Q13": {
+          "title": "What you can't stand",
+          "prompt": "What can't you stand in other people? Do you have that problem yourself?",
+          "hint": "Write three. The third is usually the hardest to admit.",
+          "probes": [
+            "What do you do when you meet this kind of person?",
+            "Has anyone ever told you that you are exactly that kind of person?"
+          ]
+        },
+        "Q14": {
+          "title": "You in three circles",
+          "prompt": "If three people from different circles, say family, colleagues, old friends, each summed you up in one sentence, what would they say? Which sentence is most accurate?",
+          "hint": "Write their actual words. Don't polish them on their behalf.",
+          "probes": [
+            "In which circle are you most relaxed?",
+            "Put together, do they sound like you?"
+          ]
+        }
+      }
+    },
+    "M05": {
+      "title": "Values and beliefs",
+      "subtitle": "What you are paying for",
+      "why": "Values aren't the words you pick on a questionnaire. They are what you actually protect in a conflict, at a cost, when something has to give. This chapter is after your bottom lines, your ranking, and what you will pay for them.",
+      "time": "About 30 min",
+      "questions": {
+        "Q01": {
+          "title": "Three bottom lines",
+          "prompt": "What are things you absolutely will not do? List three, and say why.",
+          "hint": "Don't write murder, things nobody should do. Write the ones that are yours, e.g. 'I don't badmouth a friend behind their back', 'I don't write things I don't believe for money'.",
+          "probes": [
+            "Has anyone crossed your bottom line? How did you handle it?",
+            "Have you paid a price for holding a bottom line?"
+          ]
+        },
+        "Q02": {
+          "title": "A successful life",
+          "prompt": "What does a successful life look like to you? How far from it are you now?",
+          "hint": "Write the standard social answer first, then your own. They may not match.",
+          "probes": [
+            "What do your parents think success is? Do you agree?",
+            "Are you afraid you will die without having succeeded?"
+          ]
+        },
+        "Q03": {
+          "title": "What money means to you",
+          "prompt": "What does money mean to you? How much counts as enough? What would you do for money, and what wouldn't you?",
+          "hint": "Write a concrete number, and the picture of a life behind that number.",
+          "probes": [
+            "When you had no money, what were you most afraid of?",
+            "Have you seen money change someone?"
+          ]
+        },
+        "Q04": {
+          "title": "Ranking and sacrifice",
+          "prompt": "Freedom, security, achievement, relationships, meaning: put them in order. Then say when you last sacrificed one for another.",
+          "hint": "Rank by instinct first, then check whether your recent actual choices match.",
+          "probes": [
+            "Does your ranking conflict with your parents' or your partner's?",
+            "If you could keep only one, which?"
+          ]
+        },
+        "Q05": {
+          "title": "What you believe",
+          "prompt": "What do you believe in? Religion, philosophy, science, fate, karma, luck, effort. How do you explain bad things happening to good people?",
+          "hint": "If you have no faith, you can write what you don't believe in.",
+          "probes": [
+            "Have you ever prayed? When?",
+            "Have you had a moment of 'this was meant to happen'?"
+          ]
+        },
+        "Q06": {
+          "title": "Your strongest position",
+          "prompt": "On a political or social issue, what is your strongest position? What would you pay for it?",
+          "hint": "You can skip this. Write what you actually think; no need to be politically correct.",
+          "probes": [
+            "Does anyone around you hold the opposite view? How do you get along?",
+            "Have you lost anything because of a position you held?"
+          ]
+        },
+        "Q07": {
+          "title": "Respect and contempt",
+          "prompt": "What kind of people do you respect? What kind do you look down on? Which side are you closer to?",
+          "hint": "Write three kinds of people each, then one specific name or figure.",
+          "probes": [
+            "What do the people you respect have in common?",
+            "Have you ever done something you look down on in others?"
+          ]
+        },
+        "Q08": {
+          "title": "A belief that changed recently",
+          "prompt": "Is there a view you once held firmly that changed recently? What changed it?",
+          "hint": "Work, love, money, human nature, yourself. Any of them.",
+          "probes": [
+            "Was the change painful?",
+            "What are you still sure of now?"
+          ]
+        },
+        "Q09": {
+          "title": "The thing you most regret",
+          "prompt": "What is the most immoral or the most regretted thing you have done? You can blur the details. How did you face it afterwards?",
+          "hint": "You can skip this. Write the part you are willing to write.",
+          "probes": [
+            "Did you apologise?",
+            "Have you forgiven yourself?"
+          ]
+        },
+        "Q10": {
+          "title": "Three rules for living",
+          "prompt": "If you could teach only three rules of life to someone younger, what would they be? One sentence each.",
+          "hint": "Write the three you actually live by, not the three you wish you lived by.",
+          "probes": [
+            "Which one took you the longest to learn?",
+            "Which one can't you manage even now?"
+          ]
+        }
+      }
+    },
+    "M06": {
+      "title": "Love and intimacy",
+      "subtitle": "How you come close, and how you back away",
+      "why": "Intimate relationships are where character hides least: how you ask for what you need, how you handle conflict, when you run. This chapter decides whether the digital twin feels like you in emotional scenes.",
+      "time": "About 35 min",
+      "questions": {
+        "Q01": {
+          "title": "Relationship history",
+          "prompt": "Your romantic history: how many important relationships? How did each start, how did each end, what did you learn?",
+          "hint": "No need for gossipy detail. Write the pattern: who you are always drawn to, and where you always get stuck.",
+          "probes": [
+            "Is there one you still haven't got over?",
+            "What is the mistake you most easily make in a relationship?"
+          ]
+        },
+        "Q02": {
+          "title": "How you know you've fallen",
+          "prompt": "How do you know that you have fallen for someone? What signals does your body give, and what does your head?",
+          "hint": "Write concrete signals: wanting to share something, checking your phone over and over, your body relaxing, starting to be afraid.",
+          "probes": [
+            "Do you say it first?",
+            "What do you turn into when you love someone?"
+          ]
+        },
+        "Q03": {
+          "title": "What kind of love you need",
+          "prompt": "What do you most need in a relationship? What are you most afraid will happen?",
+          "hint": "Need: company, space, being affirmed, stability, passion, being understood. Most afraid of: being abandoned, being controlled, being seen through, losing yourself.",
+          "probes": [
+            "Have you ever been ashamed of needing too much?",
+            "Have you ever got the love you wanted?"
+          ]
+        },
+        "Q04": {
+          "title": "You in a conflict",
+          "prompt": "When you clash with a partner or a close friend, what are you like? Pressing for an answer, running, going cold, erupting, reasoning, giving in. Take the most recent time.",
+          "hint": "Write what happened in the first minute, and what happened on day three.",
+          "probes": [
+            "How do you make up? Who gives in first?",
+            "What can't you stand the other person doing in a conflict?"
+          ]
+        },
+        "Q05": {
+          "title": "How you show love, how you show displeasure",
+          "prompt": "How do you show love? Does the other person receive it? How do you show displeasure?",
+          "hint": "Write your love language: doing things, giving things, physical touch, spending time, words.",
+          "probes": [
+            "What expression of yours gets misread most?",
+            "How do you want the other person to show it to you?"
+          ]
+        },
+        "Q06": {
+          "title": "Jealousy",
+          "prompt": "Do you get jealous? What triggers it? How do you handle it?",
+          "hint": "Write the most recent time, including what you said and what you didn't.",
+          "probes": [
+            "Do you go through their phone?",
+            "When jealous, do you want to control or to run?"
+          ]
+        },
+        "Q07": {
+          "title": "What you hide in a relationship",
+          "prompt": "In an intimate relationship, what is the biggest thing you have hidden, or the biggest lie? You can name the type without the detail.",
+          "hint": "You can skip this. Feelings you never said out loud count too.",
+          "probes": [
+            "Why don't you say it?",
+            "What would happen if they knew?"
+          ]
+        },
+        "Q08": {
+          "title": "Loyalty, boundaries, and the rest",
+          "prompt": "What do you think about loyalty, boundaries, open relationships, long distance, age gaps?",
+          "hint": "Write what you actually think. No need to be correct.",
+          "probes": [
+            "Where are your boundaries?",
+            "Have you crossed someone else's?"
+          ]
+        },
+        "Q09": {
+          "title": "Your relationship status now",
+          "prompt": "Your relationship now: what satisfies you, what you want to change, what you don't dare say.",
+          "hint": "If you are single, you can write about your relationship with yourself, your family, your friends.",
+          "probes": [
+            "When did you last feel close to someone?",
+            "What are you waiting for?"
+          ]
+        },
+        "Q10": {
+          "title": "If you end up alone",
+          "prompt": "If you ended up living alone, how would you do it? What are you most afraid of?",
+          "hint": "Write the picture: where you would live, what you would do each day, who you would see.",
+          "probes": [
+            "Could you live well on your own?",
+            "Are you more afraid of loneliness, or of how others see you?"
+          ]
+        }
+      }
+    },
+    "M07": {
+      "title": "Work and ambition",
+      "subtitle": "The shape you want to leave in the world",
+      "why": "Work is not just income. It is how you wrestle with reality. This chapter records your abilities, your ambition, your failure patterns, and the tone you actually use when you talk about work.",
+      "time": "About 40 min",
+      "questions": {
+        "Q01": {
+          "title": "Career path",
+          "prompt": "Your career path: for each job or project, why you went, why you left, what you took with you.",
+          "hint": "List them in order. Write the real reason you quit.",
+          "probes": [
+            "Which stretch was most like you?",
+            "Which career choice do you most regret?"
+          ]
+        },
+        "Q02": {
+          "title": "What you're best at and what you hate",
+          "prompt": "What are you best at, the thing people come to you for help with? What are you worst at, and what do you hate most?",
+          "hint": "Write specific abilities, not job titles. For example 'turning a mess of requirements into a process' rather than 'product manager'.",
+          "probes": [
+            "How did you get good at it?",
+            "Has anyone praised you for something you don't actually rate in yourself?"
+          ]
+        },
+        "Q03": {
+          "title": "Ambition",
+          "prompt": "How big is your ambition? What would you sacrifice for it? Who do you secretly want to become?",
+          "hint": "Write the version you don't quite dare say out loud.",
+          "probes": [
+            "Are you afraid of succeeding?",
+            "If you stayed ordinary your whole life, could you accept that?"
+          ]
+        },
+        "Q04": {
+          "title": "Facing authority",
+          "prompt": "How do you handle bosses, clients, authority? Give one time you pushed back, or one time you gave in.",
+          "hint": "Write what you said out loud and what you thought.",
+          "probes": [
+            "Are you afraid of authority?",
+            "What would you be like once you are the authority?"
+          ]
+        },
+        "Q05": {
+          "title": "Facing failure",
+          "prompt": "What is the biggest professional failure you have been through? Your first reaction, how you recovered, how you see it now.",
+          "hint": "Write how you explained it to other people at the time.",
+          "probes": [
+            "Did you actually use what you learned from it?",
+            "Would you try again?"
+          ]
+        },
+        "Q06": {
+          "title": "Grinding, lying flat, and boundaries",
+          "prompt": "Do you grind? Do you fake it? What do you make of lying flat? Where is the line between work and life?",
+          "hint": "Write your actual hours, not your attitude.",
+          "probes": [
+            "Do you still think about work after you leave?",
+            "Do you feel guilty taking leave?"
+          ]
+        },
+        "Q07": {
+          "title": "The work you're proudest of",
+          "prompt": "What is the work or project you are proudest of? Why that one?",
+          "hint": "It can be a job, or a private project, an article, a meal.",
+          "probes": [
+            "Does it still exist?",
+            "What do others say about it?"
+          ]
+        },
+        "Q08": {
+          "title": "If you were financially free tomorrow",
+          "prompt": "If you were financially free tomorrow, what would you do? Would you still work? How would you spend a day?",
+          "hint": "Write the first week, then the first year.",
+          "probes": [
+            "Which part of your current work could money not buy?",
+            "Who would you leave?"
+          ]
+        },
+        "Q09": {
+          "title": "Money habits",
+          "prompt": "Your money habits: tracking spending, investing, borrowing, splitting bills, treating people, how you and your partner manage money.",
+          "hint": "Write what you actually do, including the part you are ashamed of.",
+          "probes": [
+            "How did your parents spend? Who do you take after?",
+            "What is the best-value thing you have bought?"
+          ]
+        },
+        "Q10": {
+          "title": "Your biggest fear about work",
+          "prompt": "What is your biggest fear about work? Being made redundant, being seen through, meaninglessness, falling behind your peers, having no body of work.",
+          "hint": "Write the thought that wakes you at night.",
+          "probes": [
+            "When did this fear start?",
+            "What has it protected you from?"
+          ]
+        }
+      }
+    },
+    "M08": {
+      "title": "Desire and shadow",
+      "subtitle": "The things you don't say at the dinner table",
+      "why": "A digital twin built only from your bright side would read like a promo video. What actually makes it like you is the desire you're not proud of, the shame, the self-sabotage. Every question in this chapter can be skipped, and you can write only the part you're willing to write.",
+      "time": "About 30 min",
+      "questions": {
+        "Q01": {
+          "title": "What you want most and won't admit",
+          "prompt": "What do you want most that you can hardly admit to? (Being seen, being loved, beating someone, not having to try, being taken care of, revenge…)",
+          "hint": "Write the first reaction. There is no moral score here.",
+          "probes": [
+            "If you got it, what then?",
+            "What have you done for it?"
+          ]
+        },
+        "Q02": {
+          "title": "What you most fear people finding out",
+          "prompt": "What do you most fear people discovering about you?",
+          "hint": "Write the point where, if someone saw through you, it would be over.",
+          "probes": [
+            "Has anyone ever found out?",
+            "What do you cover it with?"
+          ]
+        },
+        "Q03": {
+          "title": "Envy",
+          "prompt": "Who did you last envy, and what for? What did you do about it?",
+          "hint": "Envy usually points at what you actually want.",
+          "probes": [
+            "Have you ever admitted you were envious?",
+            "After the envy, do you want to work harder or tear it down?"
+          ]
+        },
+        "Q04": {
+          "title": "Shame",
+          "prompt": "Where does your shame come from? What is your most shameful memory? (You can blur it.)",
+          "hint": "You can skip this. Write the moment your body remembers.",
+          "probes": [
+            "Who made you feel shame?",
+            "What still makes you flush now?"
+          ]
+        },
+        "Q05": {
+          "title": "Addiction and losing control",
+          "prompt": "Is there anything you're addicted to or have lost control of? (Phone, games, alcohol, shopping, work, relationships, sex, food, mood)",
+          "hint": "You can skip this. Write how you've tried to control it.",
+          "probes": [
+            "What does it help you avoid?",
+            "Have you ever quit?"
+          ]
+        },
+        "Q06": {
+          "title": "Self-sabotage",
+          "prompt": "Do you wreck things for yourself at the critical moment? Usually how?",
+          "hint": "For example: procrastinating until the last minute, disappearing, saying something cutting, deliberately not sleeping.",
+          "probes": [
+            "In that moment, what are you protecting?",
+            "How do you explain it afterward?"
+          ]
+        },
+        "Q07": {
+          "title": "The darkest thought",
+          "prompt": "What is the darkest thought you've had? (Hurting yourself, disappearing, revenge, wishing someone would disappear…) What do you do with it?",
+          "hint": "You can skip this. If you are in danger right now, contact someone you trust or a local crisis line first; this question can wait.",
+          "probes": [
+            "When is the thought strongest?",
+            "What makes it recede?"
+          ]
+        },
+        "Q08": {
+          "title": "The biggest lie",
+          "prompt": "What is the biggest lie you've told? To whom? Why?",
+          "hint": "You can skip this. You can also write the lie you told yourself.",
+          "probes": [
+            "Is the lie still going?",
+            "Do you regret it?"
+          ]
+        },
+        "Q09": {
+          "title": "The other you",
+          "prompt": "Is there another you, one that only shows up late at night, online, in front of strangers, or when drunk? What is that one like?",
+          "hint": "Write the difference between that version and the everyday one.",
+          "probes": [
+            "Do you like that version?",
+            "Which one is more real?"
+          ]
+        },
+        "Q10": {
+          "title": "If no one would ever know",
+          "prompt": "If nothing you did would ever be known and there were no consequences, what would you do differently?",
+          "hint": "You can skip this. Write the first reaction.",
+          "probes": [
+            "What does that say about what you hold down?",
+            "Is there one small thing you could do now?"
+          ]
+        }
+      }
+    },
+    "M09": {
+      "title": "Daily life and taste",
+      "subtitle": "Your small gestures and quirks",
+      "why": "Whether it feels like you often comes down to details: which punctuation you use, what time you shower, whether you avoid stepping on the lines. This chapter collects the things that look useless and sound most like you.",
+      "time": "About 30 min",
+      "questions": {
+        "Q01": {
+          "title": "Your phone",
+          "prompt": "What does your home screen look like? What are the five apps you use most? How much screen time? What is the last thing you do before sleep?",
+          "hint": "Write it straight, including the app you're embarrassed about.",
+          "probes": [
+            "What is the first thing you do after waking?",
+            "Have you tried quitting your phone?"
+          ]
+        },
+        "Q02": {
+          "title": "Body habits",
+          "prompt": "Sleep position, first thing after waking, coffee/tea/cigarettes/alcohol, exercise, when you shower, the fixed small motions of your day.",
+          "hint": "Write your body's fixed routine, like a manual.",
+          "probes": [
+            "Which habit do you most want to change?",
+            "Which habit would you never change?"
+          ]
+        },
+        "Q03": {
+          "title": "Taste",
+          "prompt": "Your style of dress, the object at home that is most like you, your favorite color/material/smell.",
+          "hint": "Write what you actually own, not what you'd like to own.",
+          "probes": [
+            "What is the most “that's exactly you” thing you have ever bought?",
+            "What kind of taste do you hate?"
+          ]
+        },
+        "Q04": {
+          "title": "Music",
+          "prompt": "Three songs on repeat lately, one song that makes you cry, one song that represents you.",
+          "hint": "Song titles and artists; a line on how it feels is better still.",
+          "probes": [
+            "When do you need music most?",
+            "Do you sing?"
+          ]
+        },
+        "Q05": {
+          "title": "Work that shaped you",
+          "prompt": "Films, books, games, shows: pick three that have shaped you. Why those?",
+          "hint": "Don't pick the highbrow ones. Pick the ones you actually remember.",
+          "probes": [
+            "When did a work last hit you?",
+            "Do you rewatch the same one?"
+          ]
+        },
+        "Q06": {
+          "title": "Your sense of humor",
+          "prompt": "What makes you laugh? Tell one thing or joke you found funny recently. How do you joke around?",
+          "hint": "Just write what you said. Don't explain the punchline.",
+          "probes": [
+            "What is your kind of humor: deadpan, cutting, self-deprecating, absurd, puns?",
+            "Who do you joke about?"
+          ]
+        },
+        "Q07": {
+          "title": "Speech habits",
+          "prompt": "Your catchphrases, how you type, the emoji/punctuation you favor, voice or text, whether you mix in English. Give three things you say often.",
+          "hint": "Open your chat history and copy three real lines; that's more accurate than memory.",
+          "probes": [
+            "Does your typing change when you're angry?",
+            "Do you type “ha” or “hahaha”?"
+          ]
+        },
+        "Q08": {
+          "title": "Relaxing, rewards and punishment",
+          "prompt": "How do you relax? How do you reward yourself? How do you punish yourself?",
+          "hint": "Punishment might be no rest allowed, bingeing, staying up all night.",
+          "probes": [
+            "When did you last really relax?",
+            "Do you think you deserve to rest?"
+          ]
+        },
+        "Q09": {
+          "title": "Collections, fixations and small quirks",
+          "prompt": "Do you collect things, have odd fixations or small quirks? (Collecting cups, things having to be straight, not stepping on the lines, reorganizing folders at midnight…)",
+          "hint": "The less useful, the better.",
+          "probes": [
+            "When did these quirks start?",
+            "Does anyone know?"
+          ]
+        },
+        "Q10": {
+          "title": "The 15 minutes that are most yours",
+          "prompt": "Which 15 minutes of the day are most your own? What are you doing?",
+          "hint": "Write the exact time and place.",
+          "probes": [
+            "What happens if those 15 minutes get interrupted?",
+            "Do you need more time like that?"
+          ]
+        }
+      }
+    },
+    "M10": {
+      "title": "Decisions and thinking",
+      "subtitle": "How you choose, how you regret",
+      "why": "A digital twin that can't make a judgment for you is just a chat toy. This chapter pulls out your decision algorithm: how you take in information, trust your gut, take risk, put things off, and regret.",
+      "time": "About 30 min",
+      "questions": {
+        "Q01": {
+          "title": "How a big decision gets made",
+          "prompt": "When you make a big decision, how does it usually go? (Gathering information, asking people, going on instinct, putting it off, making a list.) Use a real recent decision.",
+          "hint": "Write the whole path from the first thought to the final call, including the night you couldn't sleep.",
+          "probes": [
+            "Whose voice do you end up following?",
+            "Any decision you regretted the moment it was made?"
+          ]
+        },
+        "Q02": {
+          "title": "The decision you most regret",
+          "prompt": "What decision do you most regret? If you could do it again, what would you choose?",
+          "hint": "Write the one that still comes back to you in the shower.",
+          "probes": [
+            "What did you learn from it?",
+            "Would you really take the other road?"
+          ]
+        },
+        "Q03": {
+          "title": "Appetite for risk",
+          "prompt": "Are you cautious or a risk-taker? With money, with work, with love? Give one example of a risk you took.",
+          "hint": "The three can be completely different. Write them separately.",
+          "probes": [
+            "What is the biggest risk you've taken?",
+            "Can you afford to lose?"
+          ]
+        },
+        "Q04": {
+          "title": "Instinct",
+          "prompt": "Do you trust your instincts? Has instinct ever saved you, or ruined you?",
+          "hint": "Write the body feeling: a tight stomach, a cold back, an unexplained calm.",
+          "probes": [
+            "Do you usually ignore instinct or follow it?",
+            "What is your instinct most accurate about?"
+          ]
+        },
+        "Q05": {
+          "title": "How you learn, how you quit",
+          "prompt": "How do you learn something new? When do you give up? Give one thing you learned and one you quit.",
+          "hint": "Write your learning path: tutorials, finding someone, doing it straight away, putting it off for months.",
+          "probes": [
+            "How do you usually explain a quit?",
+            "What did you learn fastest?"
+          ]
+        },
+        "Q06": {
+          "title": "When you disagree",
+          "prompt": "How do you handle disagreement? Can you be persuaded? Describe a time you changed your position.",
+          "hint": "Write your tone and what your body does when you argue.",
+          "probes": [
+            "Are you arguing for the point or for winning?",
+            "Have you ever agreed out loud while not agreeing at all?"
+          ]
+        },
+        "Q07": {
+          "title": "The biases you know you have",
+          "prompt": "Which cognitive biases do you know you have? (Confirmation bias, sunk cost, people-pleasing, catastrophizing, all or nothing…)",
+          "hint": "Write the one you've been caught on.",
+          "probes": [
+            "Who pointed it out?",
+            "What has it cost you?"
+          ]
+        },
+        "Q08": {
+          "title": "Plans and follow-through",
+          "prompt": "How do you plan? Year plans, month plans, to-do lists: what share actually gets done?",
+          "hint": "Write the tools and methods you actually use.",
+          "probes": [
+            "What do you do to yourself when the plan falls apart?",
+            "Are you a planner or do you improvise?"
+          ]
+        },
+        "Q09": {
+          "title": "Sunk cost",
+          "prompt": "Is there something you should have let go of and didn't? (A job, a relationship, a project, an object.) Why couldn't you?",
+          "hint": "Write the reason you gave for putting more in, and the real reason.",
+          "probes": [
+            "How did it end?",
+            "Are you still in it?"
+          ]
+        },
+        "Q10": {
+          "title": "Your life algorithm",
+          "prompt": "If your life were an algorithm, what would its objective function be? What are its constraints?",
+          "hint": "Objective function: what you are actually maximizing, not what you say. Constraints: what you won't sacrifice, what you won't cross.",
+          "probes": [
+            "Who wrote this algorithm for you?",
+            "Which line would you rewrite?"
+          ]
+        }
+      }
+    },
+    "M11": {
+      "title": "People and perception",
+      "subtitle": "Who you are made of",
+      "why": "A person isn't an island; a person is where a few webs of relationships cross. This chapter draws your map of people, and collects you as others see you, which can correct your own account of yourself.",
+      "time": "About 30 min",
+      "questions": {
+        "Q01": {
+          "title": "The seven most important people in your life",
+          "prompt": "List the seven most important people in your life (initials are fine). One line each: who they are, what you are to each other, what you owe them or they owe you.",
+          "hint": "Include the living and the gone. Write the first feeling that comes with the name.",
+          "probes": [
+            "Who understands you without needing an explanation?",
+            "Who do you most want to make proud?"
+          ]
+        },
+        "Q02": {
+          "title": "The person closest to you now",
+          "prompt": "Who is closest to you now? How often do you see them? What do you talk about, and what don't you?",
+          "hint": "Write the details of the last time you met.",
+          "probes": [
+            "How do you show each other you care?",
+            "What would you never tell them?"
+          ]
+        },
+        "Q03": {
+          "title": "Cut off, out of touch",
+          "prompt": "Is there someone important you cut off or lost touch with? Why? Do you still think about them?",
+          "hint": "Write the last conversation.",
+          "probes": [
+            "If they reached out, would you answer?",
+            "Do you regret it?"
+          ]
+        },
+        "Q04": {
+          "title": "Who gets you, who doesn't",
+          "prompt": "Who understands you best? Who least? Who is most afraid of you? Who loves you most?",
+          "hint": "The answers can repeat. “No one” is allowed.",
+          "probes": [
+            "What does being understood feel like?",
+            "Who do you wish understood you better?"
+          ]
+        },
+        "Q05": {
+          "title": "Your role among friends",
+          "prompt": "What role do you usually play among friends? (The organizer, the listener, the one who keeps it light, the strategist, the one who disappears, the one who puts out fires…)",
+          "hint": "Write one specific scene: what you do when a friend is in trouble.",
+          "probes": [
+            "Do you like that role?",
+            "Have you ever been the one taken care of?"
+          ]
+        },
+        "Q06": {
+          "title": "Thanks, apology, refusal",
+          "prompt": "How do you say thank you, apologize, and turn someone down? Give a real example of each, in your exact words.",
+          "hint": "The exact words matter. That's where the twin's tone lives.",
+          "probes": [
+            "Is saying “no” hard for you?",
+            "Do you explain when you apologize?"
+          ]
+        },
+        "Q07": {
+          "title": "Debts of kindness, words never said",
+          "prompt": "Do you owe someone a debt of kindness, or carry words you never said? To whom?",
+          "hint": "Write the person you go quiet thinking about.",
+          "probes": [
+            "Do you plan to say it?",
+            "If you don't, what happens?"
+          ]
+        },
+        "Q08": {
+          "title": "Three letters you don't have to send",
+          "prompt": "If you wrote one line each to three people (they don't have to be sent), who would they be, and what would you say?",
+          "hint": "One line is enough.",
+          "probes": [
+            "Why these three?",
+            "How do you feel after writing them?"
+          ]
+        },
+        "Q09": {
+          "title": "How you want to be remembered",
+          "prompt": "How do you want people to remember you? How do you think they actually will?",
+          "hint": "Two lines: the ideal version and the real one.",
+          "probes": [
+            "Where do the two lines part ways?",
+            "Can you live with the real one?"
+          ]
+        },
+        "Q10": {
+          "title": "The last time you felt loved",
+          "prompt": "When did you last truly feel loved? What did the other person do?",
+          "hint": "Write the specific gesture or sentence.",
+          "probes": [
+            "How did you respond?",
+            "Do you believe you deserve to be loved?"
+          ]
+        }
+      }
+    },
+    "M12": {
+      "title": "Meaning and mortality",
+      "subtitle": "If time were short, what would you leave",
+      "why": "The last chapter pulls the camera back. How a person faces death, regret and unfinished things shows what they actually value, and that is what the digital twin should inherit most.",
+      "time": "About 35 min",
+      "questions": {
+        "Q01": {
+          "title": "The meaning of life",
+          "prompt": "What do you think the meaning of life is? Has your answer changed?",
+          "hint": "“There's no meaning” is a fine answer. So is one concrete image.",
+          "probes": [
+            "When have you felt most strongly that being alive is good?",
+            "When does everything feel meaningless?"
+          ]
+        },
+        "Q02": {
+          "title": "Death",
+          "prompt": "Are you afraid of dying? Have you been to a funeral, seen a death? How did you see things after?",
+          "hint": "Write the time you came closest to death.",
+          "probes": [
+            "Do you believe anything comes after?",
+            "How do you want to go?"
+          ]
+        },
+        "Q03": {
+          "title": "One year left",
+          "prompt": "If you had one year left, how would you spend it? Who would you tell, and who wouldn't you?",
+          "hint": "Write the first week, the first month, the last week.",
+          "probes": [
+            "Would you quit your job?",
+            "What would you least want to leave?"
+          ]
+        },
+        "Q04": {
+          "title": "Unfinished",
+          "prompt": "What is the one thing you most want to finish and haven't started? Why not?",
+          "hint": "Write the thing you remember once a year.",
+          "probes": [
+            "What is the smallest first step?",
+            "If you never do it, will you regret it?"
+          ]
+        },
+        "Q05": {
+          "title": "Epitaph",
+          "prompt": "What do you want on your gravestone? What work or effect do you want to leave?",
+          "hint": "One line is enough.",
+          "probes": [
+            "Who do you want to visit you?",
+            "How long do you want to be remembered?"
+          ]
+        },
+        "Q06": {
+          "title": "The unfinished conversation",
+          "prompt": "Is there an unfinished conversation, something you've wanted to say to someone and never have?",
+          "hint": "Just write the opening line.",
+          "probes": [
+            "Why didn't you say it?",
+            "If you said it now, what would happen?"
+          ]
+        },
+        "Q07": {
+          "title": "Forgiveness",
+          "prompt": "Who have you forgiven? Who haven't you? Does that include yourself?",
+          "hint": "Write the person you say you're over and aren't.",
+          "probes": [
+            "What is forgiveness to you?",
+            "Whose forgiveness do you need?"
+          ]
+        },
+        "Q08": {
+          "title": "A day ten years from now",
+          "prompt": "Ten years from now, what does your ideal look like? Get down to one day: where you live, who is there, what you do, what time you get up.",
+          "hint": "Don't write “financially free, traveling the world”. Write an ordinary Tuesday.",
+          "probes": [
+            "What in that day do you already have?",
+            "What would you give up for that day?"
+          ]
+        },
+        "Q09": {
+          "title": "How long you're remembered",
+          "prompt": "By whom, and for how long, do you want to be remembered? If in the end no one remembers you, was being alive still worth something?",
+          "hint": "Write what you actually feel.",
+          "probes": [
+            "Are you afraid of being forgotten?",
+            "What proves you were here?"
+          ]
+        },
+        "Q10": {
+          "title": "To yourself at 20",
+          "prompt": "If you wrote three lines to yourself at 20 right now, what would they say?",
+          "hint": "Write what you actually mean, not what's correct.",
+          "probes": [
+            "Would you at 20 have listened?",
+            "Which line do you most need to hear now?"
+          ]
+        }
+      }
+    },
+    "M13": {
+      "title": "Language samples",
+      "subtitle": "The chapter that decides whether it sounds like you",
+      "why": "A lot of digital twins get things right and still don't sound like you. The difference is language: how long your sentences run, your punctuation, your catchphrases, when you use an emoji, how you swear, how you comfort someone. For this chapter, stay as close to the original as you can. Don't polish.",
+      "time": "About 20 min",
+      "questions": {
+        "Q01": {
+          "title": "Three real messages",
+          "prompt": "Paste three messages you actually sent: one to a friend, one to someone at work, one to family. (You can scrub names, but keep the tone and punctuation.)",
+          "hint": "Copy from your chat history. Don't rewrite. Keep the length, the typos, the emoji.",
+          "probes": [
+            "What is the biggest difference in how you talk to the three?",
+            "Do you send voice messages?"
+          ]
+        },
+        "Q02": {
+          "title": "Something you wrote",
+          "prompt": "Paste something you wrote: a diary entry, a social post, an email, an article, a note to yourself.",
+          "hint": "Pick one you're satisfied with, or one that most represents you.",
+          "probes": [
+            "How many passes do you make when you write?",
+            "Are you the same on the page as out loud?"
+          ]
+        },
+        "Q03": {
+          "title": "Your voice",
+          "prompt": "How you talk: pace, volume, accent, pauses, the words you lean on, the sound of your laugh. If it's easy, record a 60-second introduction, put it in the project, and write down the file name.",
+          "hint": "Recording is optional. Write an “I talk like…” comparison.",
+          "probes": [
+            "Does your voice change when you're nervous?",
+            "Can people hear your mood?"
+          ]
+        },
+        "Q04": {
+          "title": "Four situations, exact words",
+          "prompt": "What do you say when you're angry, when you're comforting someone, when you're being soft or asking for something, when you're turning someone down? Write the actual words.",
+          "hint": "One or two lines for each. Imagine you're saying it to that person.",
+          "probes": [
+            "Which line sounds least like you?",
+            "Do you have a go-to reply for everything?"
+          ]
+        },
+        "Q05": {
+          "title": "Emoji and punctuation",
+          "prompt": "Which emoji or stickers do you use? What are your three most-used ones? What punctuation do you type with?",
+          "hint": "A screenshot or a description, either is fine.",
+          "probes": [
+            "Do you use periods?",
+            "Are your emoji politeness or actual feeling?"
+          ]
+        },
+        "Q06": {
+          "title": "The way you hate to be spoken to",
+          "prompt": "What way of talking do you hate? (Tone, word choice, the singsong, the sentence pattern.) Give examples.",
+          "hint": "Write the phrasing that irritates you the moment you hear it.",
+          "probes": [
+            "Do you talk like that yourself?",
+            "What do you most hate being called?"
+          ]
+        }
+      }
+    },
+    "M14": {
+      "title": "Final check",
+      "subtitle": "Write your own user manual",
+      "why": "The last questions aren't memory. They're calibration. By writing down what counts as like me and what it must never say, you give the twin its edges. This chapter also becomes the grading standard for the check.",
+      "time": "About 20 min",
+      "questions": {
+        "Q01": {
+          "title": "Your user manual",
+          "prompt": "How should people deal with you? What kind of apology will you accept? How should someone turn you down without hurting you? When you need space, what should people do?",
+          "hint": "Like writing a manual for a new coworker, or a partner.",
+          "probes": [
+            "What is the kind of care you hate most?",
+            "When you're hurting, do you want people to do something, or nothing at all?"
+          ]
+        },
+        "Q02": {
+          "title": "Where you're most misunderstood",
+          "prompt": "What do people most often get wrong about you? Why?",
+          "hint": "Write the point you've explained a hundred times and no one gets.",
+          "probes": [
+            "How do you want to be understood?",
+            "Would you change in order not to be misunderstood?"
+          ]
+        },
+        "Q03": {
+          "title": "Shutting down, blowing up, running",
+          "prompt": "What makes you shut down, blow up, or want to run, instantly? Give one specific trigger for each.",
+          "hint": "Write the body signal and your first reaction.",
+          "probes": [
+            "How long does it take you to come back?",
+            "Does anyone know how to bring you back?"
+          ]
+        },
+        "Q04": {
+          "title": "The last opinion you changed",
+          "prompt": "What did you last change your mind about? What changed it?",
+          "hint": "Big or small.",
+          "probes": [
+            "Do you change your mind easily?",
+            "What would you never change?"
+          ]
+        },
+        "Q05": {
+          "title": "If only three lines survived",
+          "prompt": "If the digital twin could keep only three of your lines, which three?",
+          "hint": "A catchphrase, a creed, something you say to people often.",
+          "probes": [
+            "Why those three?",
+            "Do those three represent you?"
+          ]
+        },
+        "Q06": {
+          "title": "What the twin must never do",
+          "prompt": "What should the digital twin never say or do? (Tone, content, promises, what it calls people, how it gives advice)",
+          "hint": "Write the red lines. For example: don't call me dear, don't agree to anything on my behalf, don't hand out platitudes.",
+          "probes": [
+            "If it crosses a line, how should it repair it?",
+            "What topics should it avoid outright?"
+          ]
+        },
+        "Q07": {
+          "title": "How to tell it's like you",
+          "prompt": "How do you decide an answer sounds like you? Give three criteria, most important first.",
+          "hint": "For example: uses my words, doesn't over-explain, gives the conclusion first, admits it doesn't know.",
+          "probes": [
+            "Which criterion matters most?",
+            "Which kind of “like me” is actually a stereotype?"
+          ]
+        },
+        "Q08": {
+          "title": "If it understood you better than you do",
+          "prompt": "If one day the digital twin understood you better than you do, would you be scared or glad? Why?",
+          "hint": "Write what you actually feel.",
+          "probes": [
+            "What decisions do you want it to make for you?",
+            "What decisions must it never make for you?"
+          ]
+        }
+      }
+    }
+  }
+}

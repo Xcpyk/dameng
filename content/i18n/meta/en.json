@@ -1,0 +1,18 @@
+{
+  "title": "Dameng · Life Survey",
+  "subtitle": "A life survey, distilled into a digital twin",
+  "intro": "This is not a personality test, and there is no score. It is closer to a long, structured oral history: first it puts you back in the present, then walks backward through family, character, love, work, desire and fear, and finally returns to what you want to leave behind. There are no right answers—only answers that sound like you.",
+  "rules": [
+    "Write what you remember first; it does not need to be complete. Blank spaces and “I can't remember” are information too.",
+    "Aim for specific events, not evaluations of yourself. Evaluations lie; scenes do not.",
+    "You can skip any question. Questions marked “optional” touch on privacy; skipping them does not keep the archive from being generated.",
+    "Everything stays on this computer (data/dream.db). No network, no uploads.",
+    "Do it in 4–8 sittings of 30–60 minutes. If something stirs you up, stop; you do not have to push through."
+  ],
+  "tiers": {
+    "core": "Core questions: about 3 hours, enough for a first version of the digital twin.",
+    "deep": "Deeper questions: make the archive thicker, especially contradictions, details and language samples.",
+    "sample": "Language samples: the single biggest factor in whether the twin sounds like you. Strongly recommended."
+  },
+  "ethics": "The digital twin is a mirror, not a stand-in. Do not use it to impersonate you in promises, signatures, transfers or manipulation. Private and traumatic material goes into the private layer by default; it enters the conversational archive only with your explicit permission."
+}
