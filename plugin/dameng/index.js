@@ -128,7 +128,7 @@ function toolExport(svc) {
       properties: {
         name: { type: 'string', description: 'Name shown on the archive. Defaults to the stored name, then a localized “me”.' },
         lang: LANG,
-        outDir: { type: 'string', description: 'Optional output directory. Defaults to <data dir>/exports/<timestamp>_<name>.' },
+        outDir: { type: 'string', description: 'Optional subdirectory under the Dameng data directory. Defaults to <data dir>/exports/<timestamp>_<name>.' },
       },
     },
     output: TEXT_OUTPUT,

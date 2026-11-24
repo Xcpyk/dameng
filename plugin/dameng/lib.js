@@ -489,9 +489,18 @@ export function createService(options = {}) {
     const exp = loadExport(code)
     const finalName = String(name || s.name || (code === 'zh' ? '我' : code === 'ja' ? '私' : code === 'ko' ? '나' : 'Me')).trim() || 'Me'
     const answers = s.answers
-    const folder = outDir
-      ? path.resolve(outDir)
-      : path.join(dataDir, 'exports', `${stamp()}_${safeName(finalName)}`)
+    let folder
+    if (outDir) {
+      const base = path.resolve(dataDir)
+      const target = path.resolve(outDir)
+      const rel = path.relative(base, target)
+      if (rel.startsWith('..') || path.isAbsolute(rel)) {
+        throw new Error('outDir must stay inside the Dameng data directory')
+      }
+      folder = target
+    } else {
+      folder = path.join(dataDir, 'exports', `${stamp()}_${safeName(finalName)}`)
+    }
     fs.mkdirSync(folder, { recursive: true, mode: 0o700 })
     const names = exp.strings.files
     const paths = {

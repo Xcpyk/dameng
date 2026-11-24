@@ -176,7 +176,7 @@ python3 distill.py --sample examples/sample_answers.json --out examples/沈知�
 
 ## DSH 插件
 
-同一套题库也打包成了 DSH Host 插件 `@local/dameng`，已安装到当前 profile：
+同一套题库也打包成了 DSH Host 插件 `dsh-dameng`，已安装到当前 profile：
 
 - 在对话里说「开始大梦访谈」，agent 会调用 `dameng_guide`，再按 `dameng_questions` 一次问一题。
 - `dameng_answer` 逐字记录回答，`skip: true` 标记跳过。
