@@ -667,6 +667,7 @@
     });
     $("#exportBtn").addEventListener("click", openExport);
     $("#doExport").addEventListener("click", doExport);
+    bindImport();
     $("#exportName").addEventListener("change", (e) => {
       localStorage.setItem(LS.name, e.target.value.trim() || t("me"));
     });
@@ -680,9 +681,41 @@
     if (el) el.hidden = true;
   }
 
+  /* ---------- import ---------- */
+  function bindImport() {
+    const btn = $("#importBtn");
+    const file = $("#importFile");
+    const status = $("#importStatus");
+    if (!btn || !file) return;
+    btn.addEventListener("click", () => file.click());
+    file.addEventListener("change", async () => {
+      const f = file.files && file.files[0];
+      if (!f) return;
+      status.classList.remove("error");
+      status.textContent = "";
+      try {
+        const text = await f.text();
+        const parsed = JSON.parse(text);
+        const answers = parsed && parsed.answers && typeof parsed.answers === "object" ? parsed.answers : parsed;
+        if (!answers || typeof answers !== "object" || Array.isArray(answers)) {
+          throw new Error("answers object not found");
+        }
+        const res = await postJSON("/api/import", { answers, mode: "merge" });
+        toast(t("importOk", { n: res.imported }));
+        setTimeout(() => location.reload(), 700);
+      } catch (err) {
+        status.classList.add("error");
+        status.textContent = t("importFail", { msg: err.message });
+      } finally {
+        file.value = "";
+      }
+    });
+  }
+
   /* ---------- export ---------- */
   function openExport() {
     if (!state.bank) return;
+    $("#includePrivate").checked = false;
     $("#exportModal").hidden = false;
     $("#exportResult").hidden = true;
     $("#exportResult").innerHTML = "";
@@ -699,7 +732,11 @@
     result.hidden = true;
     try {
       await flushAll();
-      const data = await postJSON("/api/export", { name, lang: state.lang });
+      const data = await postJSON("/api/export", {
+        name,
+        lang: state.lang,
+        includePrivate: $("#includePrivate").checked,
+      });
       const files = data.files
         .map((f) => {
           const key = "file" + f.kind.charAt(0).toUpperCase() + f.kind.slice(1);

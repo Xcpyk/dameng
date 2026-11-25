@@ -73,7 +73,14 @@
     "errorLoad": "打不开档案：{msg}",
     "errorServer": "请确认 python3 app.py 仍在运行，然后刷新页面。",
     "questionCore": "主线",
-    "appSeal": "梦"
+    "appSeal": "梦",
+    "exportIncludePrivate": "包含私密层（会导出原文）",
+    "exportPrivateNote": "默认导出会隐去私密题的回答；勾选后会写入原文，请勿分享。",
+    "importTitle": "导入回答备份",
+    "importHint": "选择网页或插件导出的《回答备份.json》，只补充尚未回答的题；已有答案不会被覆盖。",
+    "importButton": "选择 JSON 备份",
+    "importOk": "已导入 {n} 条回答",
+    "importFail": "导入失败：{msg}"
   },
   "en": {
     "appTitle": "Dameng",
@@ -149,7 +156,14 @@
     "errorLoad": "Could not open the archive: {msg}",
     "errorServer": "Make sure python3 app.py is still running, then refresh the page.",
     "questionCore": "Core",
-    "appSeal": "梦"
+    "appSeal": "梦",
+    "exportIncludePrivate": "Include private layer (raw text)",
+    "exportPrivateNote": "By default private answers are omitted. If you check this, raw text is written to the export—do not share it.",
+    "importTitle": "Import an answer backup",
+    "importHint": "Choose an Answers backup JSON from the web app or plugin. Only unanswered questions are filled; existing answers are never overwritten.",
+    "importButton": "Choose JSON backup",
+    "importOk": "Imported {n} answers",
+    "importFail": "Import failed: {msg}"
   },
   "ja": {
     "appTitle": "大夢",
@@ -225,7 +239,14 @@
     "errorLoad": "アーカイブを開けません：{msg}",
     "errorServer": "python3 app.py が動いているか確認して、ページを更新してください。",
     "questionCore": "メイン",
-    "appSeal": "夢"
+    "appSeal": "夢",
+    "exportIncludePrivate": "私的レイヤーを含める（原文を書き出す）",
+    "exportPrivateNote": "既定では私的な回答は省かれます。チェックすると原文が書き出されるため、共有しないでください。",
+    "importTitle": "回答バックアップを読み込む",
+    "importHint": "Web アプリまたはプラグインが書き出した回答バックアップ JSON を選んでください。未回答の質問だけを補充し、既存の回答は上書きしません。",
+    "importButton": "JSON バックアップを選ぶ",
+    "importOk": "{n} 件の回答を読み込みました",
+    "importFail": "読み込みに失敗しました：{msg}"
   },
   "ko": {
     "appTitle": "대몽",
@@ -301,6 +322,13 @@
     "errorLoad": "아카이브를 열 수 없습니다: {msg}",
     "errorServer": "python3 app.py가 실행 중인지 확인한 뒤 페이지를 새로고침하세요.",
     "questionCore": "메인",
-    "appSeal": "몽"
+    "appSeal": "몽",
+    "exportIncludePrivate": "비공개 레이어 포함 (원문 내보내기)",
+    "exportPrivateNote": "기본적으로 비공개 답변은 빠집니다. 체크하면 원문이 내보내지므로 공유하지 마세요.",
+    "importTitle": "답변 백업 가져오기",
+    "importHint": "웹 앱 또는 플러그인에서 내보낸 답변 백업 JSON을 선택하세요. 아직 답하지 않은 질문만 채우며, 기존 답변은 덮어쓰지 않습니다.",
+    "importButton": "JSON 백업 선택",
+    "importOk": "답변 {n}개를 가져왔습니다",
+    "importFail": "가져오기 실패: {msg}"
   }
 }

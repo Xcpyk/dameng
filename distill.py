@@ -87,6 +87,14 @@ def coverage(answers: dict[str, str], lang: str = "zh") -> dict:
     }
 
 
+def private_question_ids(lang: str = "zh") -> set[str]:
+    return {
+        q["full_id"]
+        for q in bank.all_questions()
+        if PRIVATE_TAGS & set(q.get("tags", []))
+    }
+
+
 def suggestions(cov: dict, answers: dict[str, str], lang: str = "zh") -> list[str]:
     ex = export_i18n.load(lang)
     s = ex["strings"]
@@ -132,7 +140,12 @@ def _quote(text: str) -> str:
     return "\n".join("> " + line if line.strip() else ">" for line in lines)
 
 
-def dossier(answers: dict[str, str], name: str = "我", lang: str = "zh") -> str:
+def dossier(
+    answers: dict[str, str],
+    name: str = "我",
+    lang: str = "zh",
+    include_private: bool = False,
+) -> str:
     lang = export_i18n.normalize(lang)
     ex = export_i18n.load(lang)
     lang = ex["lang"]
@@ -155,6 +168,7 @@ def dossier(answers: dict[str, str], name: str = "我", lang: str = "zh") -> str
         ">",
         d["noteEvidence"],
         d["notePrivate"],
+        *([d["privateWarning"]] if include_private else []),
         "",
         d["coverage"],
         "",
@@ -176,12 +190,14 @@ def dossier(answers: dict[str, str], name: str = "我", lang: str = "zh") -> str
             continue
         for q in answered:
             text = answers[q["full_id"]].strip()
+            is_private = bool(PRIVATE_TAGS & set(q.get("tags", [])))
             tags = []
             if q.get("core"):
                 tags.append(d["core"])
-            if PRIVATE_TAGS & set(q.get("tags", [])):
+            if is_private:
                 tags.append(d["private"])
             label = d["tagPrefix"] + d["tagSeparator"].join(tags) if tags else ""
+            body = text if include_private or not is_private else d["privateOmitted"]
             lines += [
                 f"### {q['full_id']} {q['title']}{label}",
                 "",
@@ -189,7 +205,7 @@ def dossier(answers: dict[str, str], name: str = "我", lang: str = "zh") -> str
                 "",
                 f"**{d['answer']}**{d['labelSeparator']}",
                 "",
-                _quote(text),
+                _quote(body),
                 "",
             ]
 
@@ -255,9 +271,19 @@ def coverage_markdown(answers: dict[str, str], name: str = "我", lang: str = "z
     return "\n".join(lines)
 
 
-def distill_prompt(answers: dict[str, str], name: str = "我", lang: str = "zh") -> str:
+def distill_prompt(
+    answers: dict[str, str],
+    name: str = "我",
+    lang: str = "zh",
+    include_private: bool = False,
+) -> str:
     ex = export_i18n.load(lang)
-    return ex["prompt"].rstrip() + "\n\n" + dossier(answers, name, ex["lang"]) + "\n"
+    return (
+        ex["prompt"].rstrip()
+        + "\n\n"
+        + dossier(answers, name, ex["lang"], include_private=include_private)
+        + "\n"
+    )
 
 
 def export_all(
@@ -267,6 +293,7 @@ def export_all(
     db_path: str | Path | None = None,
     stamp: str | None = None,
     lang: str = "zh",
+    include_private: bool = False,
 ) -> dict:
     lang = export_i18n.normalize(lang)
     ex = export_i18n.load(lang)
@@ -276,22 +303,42 @@ def export_all(
 
     safe = re.sub(r"[^\w\u4e00-\u9fff-]+", "_", name).strip("_") or "我"
     stamp = stamp or datetime.now().strftime("%Y-%m-%d_%H%M%S")
-    folder = Path(out_dir) if out_dir else EXPORT_DIR / f"{stamp}_{safe}"
+    if out_dir:
+        folder = Path(out_dir)
+    else:
+        base = EXPORT_DIR / f"{stamp}_{safe}"
+        folder = base
+        n = 2
+        while folder.exists():
+            folder = EXPORT_DIR / f"{base.name}_{n}"
+            n += 1
     folder.mkdir(parents=True, exist_ok=True)
 
     kinds = ("dossier", "prompt", "coverage", "backup", "next")
     paths = {k: folder / ex["files"][k] for k in kinds}
 
-    paths["dossier"].write_text(dossier(answers, name, lang), encoding="utf-8")
-    paths["prompt"].write_text(distill_prompt(answers, name, lang), encoding="utf-8")
+    paths["dossier"].write_text(
+        dossier(answers, name, lang, include_private=include_private), encoding="utf-8"
+    )
+    paths["prompt"].write_text(
+        distill_prompt(answers, name, lang, include_private=include_private), encoding="utf-8"
+    )
     paths["coverage"].write_text(coverage_markdown(answers, name, lang), encoding="utf-8")
+    private_ids = private_question_ids(lang)
+    backup_answers = (
+        dict(answers)
+        if include_private
+        else {k: v for k, v in answers.items() if k not in private_ids}
+    )
     paths["backup"].write_text(
         json.dumps(
             {
                 "name": name,
                 "lang": lang,
                 "exported_at": datetime.now().isoformat(timespec="seconds"),
-                "answers": answers,
+                "private_included": include_private,
+                "private_omitted": bool(private_ids & set(answers)),
+                "answers": backup_answers,
             },
             ensure_ascii=False,
             indent=2,
@@ -310,6 +357,7 @@ def export_all(
         ],
         "coverage": cov,
         "suggestions": suggestions(cov, answers, lang),
+        "private_included": include_private,
     }
 
 
@@ -320,6 +368,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--sample", help="从示例 JSON 读取回答，而不是本机数据库")
     ap.add_argument("--out", help="输出目录（默认 exports/<时间>_<名字>/）")
     ap.add_argument("--coverage", action="store_true", help="只打印覆盖情况")
+    ap.add_argument("--include-private", action="store_true", help="导出私密层原文（默认隐去）")
     args = ap.parse_args(argv)
     lang = export_i18n.normalize(args.lang)
 
@@ -336,7 +385,13 @@ def main(argv: list[str] | None = None) -> int:
         print(coverage_markdown(answers, name, lang))
         return 0
 
-    result = export_all(answers=answers, name=name, out_dir=args.out, lang=lang)
+    result = export_all(
+        answers=answers,
+        name=name,
+        out_dir=args.out,
+        lang=lang,
+        include_private=args.include_private,
+    )
     print(f"已导出到 {result['dir']}（{lang}）")
     print(
         f"进度：{cov['answered']}/{cov['total']}，主线 "

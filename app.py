@@ -129,6 +129,8 @@ class Handler(SimpleHTTPRequestHandler):
                 return self.save_answers()
             if path == "/api/export":
                 return self.export()
+            if path == "/api/import":
+                return self.import_answers()
             return self.send_json({"error": "未知接口"}, 404)
         except json.JSONDecodeError:
             self.send_json({"error": "JSON 解析失败"}, 400)
@@ -170,9 +172,48 @@ class Handler(SimpleHTTPRequestHandler):
         answers = self.answers_dict()
         if len(answers) == 0:
             return self.send_json({"error": "还没有任何回答"}, 400)
-        result = distill.export_all(answers=answers, name=name, lang=lang)
+        result = distill.export_all(
+            answers=answers,
+            name=name,
+            lang=lang,
+            include_private=bool(data.get("includePrivate")),
+        )
         result["ok"] = True
         return self.send_json(result)
+
+    def import_answers(self):
+        data = self.read_json()
+        items = data.get("answers")
+        if not isinstance(items, dict):
+            return self.send_json({"error": "answers 需要是对象"}, 400)
+        qmap = bank.question_map()
+        existing = set(self.answers_dict())
+        clean: dict[str, str] = {}
+        skipped_existing = 0
+        unknown = 0
+        for qid, text in items.items():
+            if qid not in qmap:
+                unknown += 1
+                continue
+            if qid in existing:
+                skipped_existing += 1
+                continue
+            if not isinstance(text, str):
+                continue
+            value = text.strip()
+            if not value or len(value) > 20000:
+                continue
+            clean[qid] = text
+        if clean:
+            store.upsert_many(clean, self.db_path)
+        answers = self.answers_dict()
+        return self.send_json({
+            "ok": True,
+            "imported": len(clean),
+            "skipped_existing": skipped_existing,
+            "unknown": unknown,
+            "coverage": distill.coverage(answers),
+        })
 
 
 def main(argv: list[str] | None = None) -> int:

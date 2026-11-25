@@ -74,6 +74,11 @@
       <span data-i18n="exportNameLabel">档案主人怎么称呼</span>
       <input id="exportName" value="我" maxlength="20" autocomplete="off">
     </label>
+    <label class="check">
+      <input type="checkbox" id="includePrivate">
+      <span data-i18n="exportIncludePrivate">包含私密层（会导出原文）</span>
+    </label>
+    <p class="check-note" data-i18n="exportPrivateNote">默认导出会隐去私密题的回答；勾选后会写入原文，请勿分享。</p>
     <button id="doExport" class="btn primary wide" data-i18n="exportGenerate">生成导出文件</button>
     <div id="exportResult" class="export-result"></div>
   </div>
@@ -96,6 +101,13 @@
     <div class="help-block">
       <h3 data-i18n="helpStorageTitle">答案去哪了</h3>
       <p data-i18n-html="helpStorageHtml">只写进本机的 <code>data/dream.db</code>，页面不联网。导出后生成的 Markdown 也只在项目目录里。</p>
+    </div>
+    <div class="help-block">
+      <h3 data-i18n="importTitle">导入回答备份</h3>
+      <p data-i18n="importHint">选择网页或插件导出的《回答备份.json》，只补充尚未回答的题；已有答案不会被覆盖。</p>
+      <button id="importBtn" class="btn ghost" data-i18n="importButton">选择 JSON 备份</button>
+      <input id="importFile" type="file" accept=".json,application/json" hidden>
+      <p id="importStatus" class="import-status"></p>
     </div>
     <div class="help-block">
       <h3 data-i18n="helpEthicsTitle">边界</h3>
